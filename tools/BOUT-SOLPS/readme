@@ -1,0 +1,6 @@
+Description for each files:
+b2fstate2grid.m: this routine is used for map SOLPS profiles to BOUT++ nc file
+smooth_bout2D.pro and 2Dsmooth_pre.pro: these two routines are used for 2D smooth of the mapped SOLPS profiles
+nc_decay_PFR.m: this matlab routine is for changing the BOUT++ nc profiles in PFR
+transcoeff_neoturbulent.m: this routine is used for writing BOUT++ transport coefficients to SOLPS input file
+

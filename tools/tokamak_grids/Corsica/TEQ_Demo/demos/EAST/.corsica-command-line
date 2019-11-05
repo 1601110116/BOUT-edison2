@@ -1,0 +1,19 @@
+codename="caltrans"
+probname="junkv_241380"
+logname = "junkv_241380.log"
+logunit = basopen(logname,"w")
+baspecho(logunit)
+logunit << "> # Command name:"
+logunit << "> #   /usr/local/Caltrans/vcaltrans/bin/LINUX/caltrans"
+logunit << "> # Options:"
+logunit << "> #  -noleak -probname junkv_241380 east_sym.sav graphics.bas "
+logunit << " "
+output graphics; version; output tty
+read initcom
+read ploteq.ezn
+read macro.vs
+read bessel
+read macro.inv
+character*128 restore_file="east_sym.sav"
+read {restore}.bas
+read "graphics.bas"

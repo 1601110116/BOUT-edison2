@@ -1,0 +1,170 @@
+(1) Execute ds with just the tokamak.inp files
+
+        cp demos/deadstart/*.inp .
+
+        caltrans tokamak.bas
+        ds("tokamak.inp")
+        win
+        layout
+        profiles
+        quit
+
+
+(2) Execute ds with both input files...
+
+        caltrans tokamak.bas
+        ds("tokamak.inp", "coils.inp")
+        win
+        layout
+        profiles
+        quit
+
+
+(3) Start-up with a save-file, make a change, and save it...
+
+        caltrans iter.sav  # Note the prompt: "ceq> "
+        list packages
+        list rc
+        list eq.rc
+        rc
+        rc(1) = rc(1) + 0.5
+        run  # Note: "Calculating ..." messages
+        saveq("my-iter.sav")
+        quit
+
+        caltrans my-iter.sav
+        rc
+        open "my-iter.sav"  # Sometimes quotes are necessary
+        ls
+        ls-l
+
+
+(4) Inspect graphics routines...
+
+        caltrans
+        getenv("CORSICA_SCRIPTS")
+        scripts
+        quit
+
+        <editor> $CALTRANS_SCRIPTS/graphics.bas
+        <browse>
+
+
+(5) Save some output data and plot it later...
+
+        caltrans iter.sav
+        package eq  # aka "corsica"
+        list li
+        list alfa
+        
+        # Create storage for output...
+        real zalfa0(0), zli3(0)
+
+        # Calculate li for a few alfa values...
+        integer i
+        do i = 1,5
+          alfa(0) = alfa(0)+ 0.1*(i - 1)
+          run
+          zalfa0 := alfa(0)
+          zli3 := li(3)
+        enddo
+
+        # Save data to disk...
+        create mydata.pfb
+        write zalfa0, zli3
+        close
+
+        quit
+
+        # Restore data in another session...
+        caltrans
+        restore mydata.pfb
+        win
+        plot zli3 zalfa0
+        attr labels no
+        titles "ITER" "Profile parameters alfa(0)" "li(3)"
+        attr legend no
+        # Try a different font...
+        fonts("list")
+        titles ":F122:ITER" ":F2:Profile parameter alfa(0)" ":F2:li(3)"
+        cgm close
+        cgm on
+        sf
+        quit
+
+        # Extract frame of interest with NCARG idt...
+        idt <name>.ncgm &
+        <select frfame>
+        <press save>
+        <press quit>
+
+        # Convert to postscript with NCARG ctrans...
+        ctrans -d ps.color new.ncgm > new.ps
+
+        # Convert to EPS...
+        ps2eps new.ps
+
+        # Edit with favorite graphics editor
+
+        # You can also write PS directly from caltrans with "ps on" then select
+        # frames with, e.g., "gv"
+
+        
+(6) Modifying coil specifications...
+
+        # See Table 3 (page 4) and Fig. 1 (page 36) in docs/tokamak_ds.pdf.
+
+        # Note: npfc and ncplot need to be specified in addition to nc!
+
+        # Try deleting a coil.
+
+        # Try adding a coil.
+
+        # Look at coil input and output in code...
+
+        list TeqGS_input
+
+        list TeqGS_output
+
+        # See also docs/limit-line.pdf for some newer coil input quantities.
+
+
+(7) Exercise "managed" configuration changes as in demos/device.
+
+
+(8) Try changing plasma shape constraints
+
+        caltrans iter.sav
+        package eq
+        win
+        alfbd = 1; run; pbg
+        alfbd = 0.1; run; pbg
+        nbd = 1; run; pbg
+        nbd = 0; run; pbg  # Oops
+        nbd = 1; recoup
+        alfbd = 16; run; pbg
+        zfbd = 0.9*zfbd; run; pbg
+
+(9) Increase resolution
+
+        caltrans iter.sav
+        package eq
+        win
+        mdef lo=
+          layout(,0)
+        mend
+        zoom; lo
+        gridup
+        nprt59 = 1  # To display G-S progress
+        run
+        lo
+
+(10) Increase accuracy of solution...
+
+        caltrans iter.sav
+        corsica
+        residj; epsj
+        epsj = 1e-10  # Demand better convergence
+        nprt59 = 1
+        run
+        pbg

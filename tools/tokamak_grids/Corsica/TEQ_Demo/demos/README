@@ -1,0 +1,18 @@
+===============================================================================
+
+The demos directory contains a few Corsica demonstration categories:
+
+	alfbd		Scan alfbd with fuzzy boundary points
+	ceq		Constrained equilibrium demos
+	d3d		DIII-D demos (morph, inverse equil., DCON)
+	deadstart	Create tokamak model w/o save-file
+	device		Modify device configuration
+	fiducials	Generate tokamak fiducial states
+	graphics	Corsica graphics demo
+
+
+NOTE:
+	Some of the demos involving coil diagnostics utilize recent code
+	modifications and will not work with old versions of caltrans.
+
+===============================================================================

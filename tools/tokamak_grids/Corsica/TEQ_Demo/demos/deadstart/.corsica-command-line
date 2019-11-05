@@ -1,0 +1,17 @@
+codename="caltrans"
+probname="junkb_01915"
+logname = "junkb_01915.log"
+csc.logunit = basopen(logname,"w")
+baspecho(logunit)
+logunit << "> # Command name:"
+logunit << "> #   /home/rhb/caltrans/corsica/LINUX/caltrans"
+logunit << "> # Options:"
+logunit << "> #  -probname junkb_01915 demo1.bas "
+logunit << " "
+output graphics; version; output tty
+read initcom
+read ploteq.ezn
+read macro.vs
+read bessel
+read macro.inv
+read "demo1.bas"

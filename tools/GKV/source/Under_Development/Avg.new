@@ -1,0 +1,429 @@
+
+Function GKVs1D::Avg,arg, _Extra=extra
+;
+; Purpose:
+;
+;		This function returns the average of 'self' over the selected
+;		independent variable.
+;
+;
+; 	Argument:
+;
+;			The (optional) argument is any legal axis identifier.
+;			That is, either an integer between 1 and nDims, or
+;			a STRING containing an axis mnemonic.
+;
+;	Keywords:
+;
+;	   Axis		If no argument is provided, then this keyword may be 
+;			used to identify independent variable with respect to 
+;			which the partial derivative is to be taken. Set axis 
+;			equal to any legal axis identifier (see above).
+;
+;	 mnemonic	Set the mnemonic of the selected axis equal to a two-element 
+;			array, [min, max], to both identify the independent variable
+;			for which the (partial) derivative is to be taken, and to 
+;			reset the signal window on this axis (before taking the derivative).
+;			This two-element array is interpreted as the desired RANGE in
+;			the independent variable, NOT the integer 'irange'
+;
+;	   irange	Set 'irange' to a two-element (integer) array to reset the signal
+;			window before taking the derivative w.r.t. the selected independent variable.
+;
+;	    range	Set 'range' to a two-element (floating point) array to set the
+;			range in the independent variable over which the (partial) derivative 
+;			is to be taken.
+;
+;	Side Effects:
+;
+;			If a 'range' or 'irange' is specified on the command line 
+;			(either directly, or via 'mnemonic' = ...) then the 
+;			SignalWindow method will be invoked on 'self' and,
+;			on return, the signal window of the selected independent
+;			variable will have been modified.
+;
+; Written by W.M. Nevins
+;	6/18/00
+;
+; Revised by W.M. Nevins
+;	3/20/01
+;
+
+CASE N_PARAMS() OF
+	0	:	axis = self -> AxisIrange(     _Extra=extra)
+	1	:	axis = self -> AxisIrange(arg, _Extra=extra)
+	else	:	BEGIN
+				MESSAGE, 'Avg called with too many arguments', /INFORMATIONAL
+				RETURN, self
+			END
+ENDCASE
+IF(axis LT 0) THEN BEGIN
+	MESSAGE, 'No valid axis identifier', /INFORMATIONAL
+	RETURN, self
+ENDIF
+resultStr = {GKVsd}
+FOR i=0, N_TAGS(resultStr)-1 DO resultStr.(i) = self.(i)
+axisString = STRING(axis, FORMAT='(I1)')
+commandString = 'Grid = self.Grid' + axisString
+ok = EXECUTE(commandString)
+values = *self.values
+info = SIZE(values)
+npoints = info[axis]
+irange = grid.irange
+axisTitle = grid.title
+
+resultStr.Title = '!12<!X' + self.title + '!12>!X!D' + axisTitle  + '!N'
+newIndices = self -> IndexRemove(iaxis)
+resultStr.indices = PTR_NEW(newIndices)
+;
+; Compute Average
+;
+dx = (*grid.values)[(irange[0]+1):irange[1]] - (*grid.values)[irange[0]:(irange[1]-1)]
+values = 0.5*((*self.values)[(irange[0]+1):irange[1]] + (*self.values)[irange[0]:(irange[1]-1)])*dx
+values = values/( (*grid.values)[irange[1]] - (*grid.values)[irange[0]] )
+values = TOTAL(values)
+resultStr.values = PTR_NEW(values)
+result = OBJ_NEW("GKVsd", resultStr)
+
+RETURN, result
+END ; ****** GKVs1D::Avg ****** ;
+
+
+
+Function GKVs2D::Avg, arg1,arg2, arg3, arg4, _Extra=extra
+;
+; Purpose:
+;
+;		This function returns the average of 'self' over the selected
+;		independent variable(s).
+;
+;
+; 	Argument:
+;
+;			The (optional) arguments are any legal axis identifiers.
+;			That is, either an integer between 1 and nDims, or
+;			a STRING containing an axis mnemonic.
+;
+;	Keywords:
+;
+;	   Axis		If no argument is provided, then this keyword may be 
+;			used to identify independent variable with respect to 
+;			which the partial derivative is to be taken. Set axis 
+;			equal to any legal axis identifier (see above).
+;
+;	 mnemonic	Set the mnemonic of the selected axis equal to a two-element 
+;			array, [min, max], to both identify the independent variable
+;			for which the (partial) derivative is to be taken, and to 
+;			reset the signal window on this axis (before taking the derivative).
+;			This two-element array is interpreted as the desired RANGE in
+;			the independent variable, NOT the integer 'irange'
+;
+;	   irange	Set 'irange' to a two-element (integer) array to reset the signal
+;			window before taking the derivative w.r.t. the selected independent variable.
+;
+;	    range	Set 'range' to a two-element (floating point) array to set the
+;			range in the independent variable over which the (partial) derivative 
+;			is to be taken.
+;
+;	Side Effects:
+;
+;			If a 'range' or 'irange' is specified on the command line 
+;			(either directly, or via 'mnemonic' = ...) then the 
+;			SignalWindow method will be invoked on 'self' and,
+;			on return, the signal window of the selected independent
+;			variable will have been modified.
+;
+; Written by W.M. Nevins
+;	6/18/00
+;
+; Revised by W.M. Nevins
+;	3/20/01
+;
+nDims = self -> NumDims()
+nArgs = N_PARAMS()
+IF(nArgs GT nDims) THEN BEGIN
+	MESSAGE, "Avg called with too many arguments", /INFORMATIONAL
+ENDIF
+;
+; Convert all arguments to integers and 
+; concatenate into single  array
+;
+nArgs = N_PARAMS()
+args = STRARR(2)
+args = ["arg1", "arg2"]
+
+nElements   = INTARR(nArgs)
+totElements = INTARR(nArgs+1)
+FOR i=0,nArgs-1 DO BEGIN				; count number of axisIDs passsed as arguments	
+	commandString = "nElements[i] = N_ELEMENTS(" + arg[i] + ")
+	ok = EXECUTE(commandString)
+ENDFOR
+totElements[1:nArgs] = TOTAL(nElements, /CUMULATIVE)
+nElementsTot = TOTAL(nElements)
+argArray = INTARR(nElementsTot)
+
+FOR i=0,nArgs-1 DO BEGIN				; Load argument strings into 'stringArgArray'
+	commandString = "thisArg = " + arg[i] 
+	ok = EXECUTE(commandString)
+	isString = Query_String(thisArg)
+	IF(nElements[i] NE 0) THEN BEGIN
+		IF(isString) THEN BEGIN			; Convert string arguments to ingeter
+			FOR j=0, nELEMENTS[i]-1 DO argArray[totElements[i]+j] = self -> AxisIrange(thisArg[j])
+		ENDIF ELSE BEGIN
+			FOR j=0, nElements[i]-1 DO argArray[totElements[i]+j] = thisArg[j]
+		ENDELSE
+	ENDIF
+ENDFOR
+; *******************************
+
+
+
+CASE N_PARAMS() OF
+	0	:	axis = self -> AxisIrange(     _Extra=extra)
+	1	:	axis = self -> AxisIrange(arg1, _Extra=extra)
+	2	:	BEGIN
+				axis = INTARR(2)
+				axis[0] = self -> AxisIrange(arg1)
+				axis[1] = self -> AxisIrange(arg2)
+				axis = SORT(axis)
+			END
+	3	:	BEGIN
+				axis = INTARR(3)
+				axis[0] = self -> AxisIrange(arg1)
+				axis[1] = self -> AxisIrange(arg2)
+				axis[3] = self -> AxisIrange(arg3)
+				axis = SORT(axis)
+			END
+	4	:	BEGIN
+				axis = INTARR(4)
+				axis[0] = self -> AxisIrange(arg1)
+				axis[1] = self -> AxisIrange(arg2)
+				axis[3] = self -> AxisIrange(arg3)
+				axis[4] = self -> AxisIrange(arg4)
+				axis = SORT(axis)
+			END
+	else	:	BEGIN
+				MESSAGE, 'Avg does not support GKV objects of dimensionality greater than 4', /INFORMATIONAL
+				RETURN, 0
+			END
+ENDCASE
+IF(axis[0] LT 0) THEN BEGIN
+	MESSAGE, 'Invalid axis identifier', /INFORMATIONAL
+	RETURN, 0
+ENDIF
+axisString = STRING(axis, FORMAT='(I1)')
+values = *self.values
+jAxis=0				; jAxis is current location in "axis" array
+kAxis=1				; kAxis is the number of current grid in output structure ('resultStr')
+FOR iAxis=1, nDims DO BEGIN	; iAxis is the number of the current grid in 'self'
+	IF(iAxis EQ axis[jAxis]) THEN BEGIN	; Found an axis to average ove
+		commandString = 'Grid = self.Grid' + axisString[i]
+		ok = EXECUTE(commandString)
+		irange = grid.irange
+		dx = (*grid.values)[(irange[0]+1):irange[1]] - (*grid.values)[irange[0]:(irange[1]-1)]
+		
+		
+	ENDIF ELSE BEGIN
+	ENDELSE
+ENDOR
+
+
+
+
+CASE nDims-nArgs OF
+	0	:	resultStr = {GKVsd}
+	1	:	resultStr = {GKVs1D}
+	2	:	resultStr = {GKVs2D}
+	3	:	resultStr = {GKVs3D}
+ENDCASE
+nGKVsd = N_TAGS({GKVsd}
+FOR i=0, N_TAGS(resultStr)-1 DO resultStr.(i) = self.(i)
+
+
+FOR iaxis = 1, N_ELEMENTS(axisString) DO BEGIN
+	commandString = 'Grid = self.Grid' + axisString[i]
+	ok = EXECUTE(commandString)
+
+
+
+resultStr.Title = '!12<!X' + self.title + '!12>!X!D' + axisTitle  + '!N'
+newIndices = self -> IndexRemove(iaxis)
+resultStr.indices = PTR_NEW(newIndices)
+;
+; Compute Average
+;
+dx = (*grid.values)[(irange[0]+1):irange[1]] - (*grid.values)[irange[0]:(irange[1]-1)]
+values = 0.5*((*self.values)[(irange[0]+1):irange[1]] + (*self.values)[irange[0]:(irange[1]-1)])*dx
+values = values/( (*grid.values)[irange[1]] - (*grid.values)[irange[0]] )
+values = TOTAL(values)
+resultStr.values = PTR_NEW(values)
+result = OBJ_NEW("GKVsd", resultStr)
+
+RETURN, result
+END ; ****** GKVs2D::Avg ****** ;
+
+
+Function GKVs3D::Avg, arg1,arg2, arg3, arg4, _Extra=extra
+;
+; Purpose:
+;
+;		This function returns the average of 'self' over the selected
+;		independent variable(s).
+;
+;
+; 	Argument:
+;
+;			The (optional) arguments are any legal axis identifiers.
+;			That is, either an integer between 1 and nDims, or
+;			a STRING containing an axis mnemonic.
+;
+;	Keywords:
+;
+;	   Axis		If no argument is provided, then this keyword may be 
+;			used to identify independent variable with respect to 
+;			which the partial derivative is to be taken. Set axis 
+;			equal to any legal axis identifier (see above).
+;
+;	 mnemonic	Set the mnemonic of the selected axis equal to a two-element 
+;			array, [min, max], to both identify the independent variable
+;			for which the (partial) derivative is to be taken, and to 
+;			reset the signal window on this axis (before taking the derivative).
+;			This two-element array is interpreted as the desired RANGE in
+;			the independent variable, NOT the integer 'irange'
+;
+;	   irange	Set 'irange' to a two-element (integer) array to reset the signal
+;			window before taking the derivative w.r.t. the selected independent variable.
+;
+;	    range	Set 'range' to a two-element (floating point) array to set the
+;			range in the independent variable over which the (partial) derivative 
+;			is to be taken.
+;
+;	Side Effects:
+;
+;			If a 'range' or 'irange' is specified on the command line 
+;			(either directly, or via 'mnemonic' = ...) then the 
+;			SignalWindow method will be invoked on 'self' and,
+;			on return, the signal window of the selected independent
+;			variable will have been modified.
+;
+; Written by W.M. Nevins
+;	6/18/00
+;
+; Revised by W.M. Nevins
+;	3/20/01
+;
+nDims = self -> NumDims()
+nArgs = N_PARAMS()
+IF(nArgs GT nDims) THEN BEGIN
+	MESSAGE, "Avg called with too many arguments", /INFORMATIONAL
+ENDIF
+;
+; Concatenate arguments into single string array
+;
+nArgs = N_PARAMS()
+args = STRARR(41)
+args = ["arg1", "arg2", "arg3", "arg4"]
+
+nElements   = INTARR(nArgs)
+totElements = INTARR(nArgs+1)
+FOR i=0,nArgs-1 DO BEGIN				; count number of strings passed as arguments	
+	commandString = "nElements[i] = N_ELEMENTS(" + arg[i] + ")"
+	ok = EXECUTE(commandString)
+ENDFOR
+totElements[1:nArgs] = TOTAL(nElements, /CUMULATIVE)
+nStrings = TOTAL(nElements)
+arg_Array = STRARR(nObjs)
+
+FOR i=0,nArgs-1 DO BEGIN				; Load valid GKVsXD objects into 'obj_Array'
+	IF(nElements[i] NE 0) THEN BEGIN
+		commandString = "arg_Array[totElements[i]:(totElements[i+1]-1)] = " + args[i] + "[0:(nElements(i)-1)]"
+		ok = EXECUTE(commandString)
+	ENDIF
+ENDFOR
+
+
+
+
+CASE N_PARAMS() OF
+	0	:	axis = self -> AxisIrange(     _Extra=extra)
+	1	:	axis = self -> AxisIrange(arg1, _Extra=extra)
+	2	:	BEGIN
+				axis = INTARR(2)
+				axis[0] = self -> AxisIrange(arg1)
+				axis[1] = self -> AxisIrange(arg2)
+				axis = SORT(axis)
+			END
+	3	:	BEGIN
+				axis = INTARR(3)
+				axis[0] = self -> AxisIrange(arg1)
+				axis[1] = self -> AxisIrange(arg2)
+				axis[3] = self -> AxisIrange(arg3)
+				axis = SORT(axis)
+			END
+	4	:	BEGIN
+				axis = INTARR(4)
+				axis[0] = self -> AxisIrange(arg1)
+				axis[1] = self -> AxisIrange(arg2)
+				axis[3] = self -> AxisIrange(arg3)
+				axis[4] = self -> AxisIrange(arg4)
+				axis = SORT(axis)
+			END
+	else	:	BEGIN
+				MESSAGE, 'Avg does not support GKV objects of dimensionality greater than 4', /INFORMATIONAL
+				RETURN, 0
+			END
+ENDCASE
+IF(axis[0] LT 0) THEN BEGIN
+	MESSAGE, 'Invalid axis identifier', /INFORMATIONAL
+	RETURN, 0
+ENDIF
+axisString = STRING(axis, FORMAT='(I1)')
+values = *self.values
+jAxis=0				; jAxis is current location in "axis" array
+kAxis=1				; kAxis is the number of current grid in output structure ('resultStr')
+FOR iAxis=1, nDims DO BEGIN	; iAxis is the number of the current grid in 'self'
+	IF(iAxis EQ axis[jAxis]) THEN BEGIN	; Found an axis to average ove
+		commandString = 'Grid = self.Grid' + axisString[i]
+		ok = EXECUTE(commandString)
+		irange = grid.irange
+		dx = (*grid.values)[(irange[0]+1):irange[1]] - (*grid.values)[irange[0]:(irange[1]-1)]
+		
+		
+	ENDIF ELSE BEGIN
+	ENDELSE
+ENDOR
+
+
+
+
+CASE nDims-nArgs OF
+	0	:	resultStr = {GKVsd}
+	1	:	resultStr = {GKVs1D}
+	2	:	resultStr = {GKVs2D}
+	3	:	resultStr = {GKVs3D}
+ENDCASE
+nGKVsd = N_TAGS({GKVsd}
+FOR i=0, N_TAGS(resultStr)-1 DO resultStr.(i) = self.(i)
+
+
+FOR iaxis = 1, N_ELEMENTS(axisString) DO BEGIN
+	commandString = 'Grid = self.Grid' + axisString[i]
+	ok = EXECUTE(commandString)
+
+
+
+resultStr.Title = '!12<!X' + self.title + '!12>!X!D' + axisTitle  + '!N'
+newIndices = self -> IndexRemove(iaxis)
+resultStr.indices = PTR_NEW(newIndices)
+;
+; Compute Average
+;
+dx = (*grid.values)[(irange[0]+1):irange[1]] - (*grid.values)[irange[0]:(irange[1]-1)]
+values = 0.5*((*self.values)[(irange[0]+1):irange[1]] + (*self.values)[irange[0]:(irange[1]-1)])*dx
+values = values/( (*grid.values)[irange[1]] - (*grid.values)[irange[0]] )
+values = TOTAL(values)
+resultStr.values = PTR_NEW(values)
+result = OBJ_NEW("GKVsd", resultStr)
+
+RETURN, result
+END ; ****** GKVs3D::Avg ****** ;

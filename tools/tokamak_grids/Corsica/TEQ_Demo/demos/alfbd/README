@@ -1,0 +1,11 @@
+===============================================================================
+
+When fuzzy boundary points are specified (rfbd, zfbd, zlfbd), it's a good idea
+to vary the weights over a wide range to see how the coil cost versus plasma
+shape trade-off.
+
+For example:
+
+	caltrans iter.sav alfbd-scan.bas
+
+===============================================================================

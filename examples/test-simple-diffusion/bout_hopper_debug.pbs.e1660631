@@ -1,0 +1,219 @@
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+
+BOUT++ version 1.00
+Revision: 3535e7d336d762305fd36ddc2e482a14b8c6a3f8
+MD5 checksum: 2d3d989248985fb4fe64593962f68a0b
+Code compiled on May 15 2012 at 15:58:11
+
+B.Dudson (University of York), M.Umansky (LLNL) 2007
+Based on BOUT by Xueqiao Xu, 1999
+
+Processor number: 0 of 8
+
+Compile-time options:
+	Checking enabled, level 2
+	Signal handling enabled
+	PDB support enabled
+	netCDF support enabled
+	OpenMP parallelisation disabled
+Reading options file data/BOUT.inp
+	Option solver/type =  (default)
+	Option /nout = 30 (data/BOUT.inp)
+	Option /timestep = 0.0001 (data/BOUT.inp)
+	Option /grid = data/advect.grd.cdl (data/BOUT.inp)
+	Option /dump_float = true   (default)
+	Option /restart = false  (default)
+	Option /append = false  (default)
+	Option /dump_format = nc (data/BOUT.inp)
+	Option /StaggerGrids = false  (default)
+Setting X differencing methods
+	First       :  Fourth order central (C4)
+	Second      :  Fourth order central (C4)
+	Upwind      :  First order upwinding (U1)
+	Flux        :  Split into upwind and central (SPLIT)
+Setting Y differencing methods
+	First       :  Fourth order central (C4)
+	Second      :  Second order central (C2)
+	Upwind      :  First order upwinding (U1)
+	Flux        :  Split into upwind and central (SPLIT)
+Setting Z differencing methods
+	First       :  Fourth order central (C4)
+	Second      :  Second order central (C2)
+	Upwind      :  First order upwinding (U1)
+	Flux        :  Split into upwind and central (SPLIT)
+Setting grid format
+	Option /grid_format =  (default)
+	Using NetCDF format for file 'data/advect.grd.cdl'
+Loading mesh
+	Grid size: 5 by 128
+	Option /mxg = 2 (data/BOUT.inp)
+	Option /myg = 2 (data/BOUT.inp)
+	Option /NXPE = 1 (default)
+	Option /mz = 33 (data/BOUT.inp)
+	Option /non_uniform = false  (default)
+	Option /twistshift = false (data/BOUT.inp)
+	Option /TwistOrder = 0 (default)
+	Option /ShiftOrder = 0 (default)
+	Option /shiftxderivs = false (data/BOUT.inp)
+	Option /IncIntShear = false  (default)
+	Option /BoundaryOnCell = false  (default)
+	Option /StaggerGrids = false  (default)
+	Option /periodicX = false  (default)
+	Option /async_send = false  (default)
+	Option /zmin = 0 (data/BOUT.inp)
+	Option /zmax = 0.2 (data/BOUT.inp)
+	WARNING: Branch-cut 'jyseps1_2' not found. Setting to 64
+	WARNING: Branch-cut 'jyseps2_1' not found. Setting to 64
+	WARNING: Number of inner y points 'ny_inner' not found. Setting to 64
+	EQUILIBRIUM IS SINGLE NULL (SND) 
+Connection between top of Y processor 7 and bottom of 0 in range 0 <= x < 5
+=> This processor sending in down
+WARNING adding connection: poloidal index -1 out of range
+	MYPE_IN_CORE = 1
+	DXS = 5, DIN = 7. DOUT = -1
+	UXS = 0, UIN = -1. UOUT = 1
+	XIN = -1, XOUT = -1
+	Twist-shift: DI 
+	WARNING: Could not read 'g11' from grid. Setting to 1.000000e+00
+	WARNING: Could not read 'g22' from grid. Setting to 1.000000e+00
+	WARNING: Could not read 'g33' from grid. Setting to 1.000000e+00
+	WARNING: Could not read 'g12' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'g13' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'g23' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'zShift' from grid. Setting to 0.000000e+00
+	WARNING: Z shift for radial derivatives not found
+	WARNING: Twist-shift angle 'ShiftAngle' not found. Setting from zShift
+	Option /twistshift_pf = false  (default)
+	Maximum error in diagonal inversion is 0.000000e+00
+	Maximum error in off-diagonal inversion is 0.000000e+00
+	WARNING: Could not read 'J' from grid. Setting to 0.000000e+00
+	WARNING: Jacobian 'J' not found. Calculating from metric tensor
+	WARNING: Could not read 'Bxy' from grid. Setting to 0.000000e+00
+	WARNING: Magnitude of B field 'Bxy' not found. Calculating from metric tensor
+Calculating differential geometry terms
+	Communicating connection terms
+Boundary regions in this processor: core, sol, 
+	done
+Setting file formats
+	Using NetCDF format for file 'data/BOUT.dmp.0.nc'
+Initialising physics module
+	Reading contravariant vector v
+	WARNING: Could not read 'vx' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'vz' from grid. Setting to 0.000000e+00
+	Reading contravariant vector g
+	WARNING: Could not read 'gx' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'gy' from grid. Setting to 0.000000e+00
+	WARNING: Could not read 'gz' from grid. Setting to 0.000000e+00
+	Option gas/gamma = 1.66667 (default)
+	Option gas/viscosity = 0 (data/BOUT.inp)
+	Option gas/include_viscosity = false (data/BOUT.inp)
+	Option gas/v0_multiply = -1 (data/BOUT.inp)
+Setting boundary for variable density
+	core region: 	Option all/bndry_all = neumann (data/BOUT.inp)
+
+	sol region: 	Option all/bndry_all = neumann (data/BOUT.inp)
+
+Initial profile global options
+	Option /twistshift = false (data/BOUT.inp)
+	Option /Ballooning = false  (default)
+	Option /ShiftInitial = false  (default)
+
+Setting initial value of density
+	Option density/scale = 0.5 (data/BOUT.inp)
+	Option all/xs_opt = 0 (data/BOUT.inp)
+	Option all/ys_opt = 5 (data/BOUT.inp)
+	Option all/zs_opt = 5 (data/BOUT.inp)
+	Option all/xs_mode = 4 (default)
+	Option all/ys_mode = 4 (default)
+	Option all/zs_mode = 1 (data/BOUT.inp)
+	Option all/xs_phase = 0 (default)
+	Option all/ys_phase = 0 (default)
+	Option all/zs_phase = 0 (default)
+	Option all/xs_s0 = 0.5 (default)
+	Option all/ys_s0 = 0.5 (data/BOUT.inp)
+	Option all/zs_s0 = 0.5 (default)
+	Option all/xs_wd = 0.2 (default)
+	Option all/ys_wd = 0.1 (data/BOUT.inp)
+	Option all/zs_wd = 0.2 (default)
+
+Initialising solver
+	Option /archive = -1 (default)
+	Option /dump_format = nc (data/BOUT.inp)
+	Option /restart_format = nc (default)
+	Using NetCDF format for file 'nc'
+Initialising PVODE solver
+	Boundary region inner X
+	Boundary region outer X
+	3d fields = 1, 2d fields = 0 neq=20480, local_N=2560
+	Option solver/mudq = 3 (default)
+	Option solver/mldq = 3 (default)
+	Option solver/mukeep = 0 (default)
+	Option solver/mlkeep = 0 (default)
+	Option solver/atol = 1e-10 (data/BOUT.inp)
+	Option solver/rtol = 1e-05 (data/BOUT.inp)
+	Option solver/use_precon = false  (default)
+	Option solver/precon_dimens = 50 (default)
+	Option solver/precon_tol = 0.0001 (default)
+	Option solver/mxstep = 500 (default)
+Running simulation
+
+
+Run started at  : Tue May 15 23:48:46 2012
+
+	Option /wall_limit = -1 (default)
+Sim Time  |  RHS evals  | Wall Time |  Calc    Inv   Comm    I/O   SOLVER
+
+1.000e-04        234       4.54e-01    78.6    0.0    1.7   10.6    9.1
+|  Step 1 of 30. Elapsed 0:00:00.0 ETA 0:00:13.22.000e-04         73       1.67e-01    66.2    0.0    1.4   14.8   17.6
+/  Step 2 of 30. Elapsed 0:00:00.2 ETA 0:00:04.73.000e-04         29       7.14e-02    61.6    0.0    1.3   20.7   16.4
+-  Step 3 of 30. Elapsed 0:00:00.2 ETA 0:00:01.94.000e-04         43       1.25e-01    52.1    0.0    1.1   36.7   10.1
+\  Step 4 of 30. Elapsed 0:00:00.4 ETA 0:00:03.35.000e-04         28       9.55e-02    44.5    0.0    0.9   28.2   26.4
+|  Step 5 of 30. Elapsed 0:00:00.5 ETA 0:00:02.46.000e-04         23       9.53e-02    36.7    0.0    0.8   55.4    7.1
+/  Step 6 of 30. Elapsed 0:00:00.6 ETA 0:00:02.37.000e-04         16       8.42e-02    28.8    0.0    0.6   36.6   34.0
+-  Step 7 of 30. Elapsed 0:00:00.6 ETA 0:00:01.98.000e-04         22       1.32e-01    25.4    0.0    0.5   65.3    8.8
+\  Step 8 of 30. Elapsed 0:00:00.8 ETA 0:00:02.99.000e-04         17       5.61e-02    46.0    0.0    1.0   24.9   28.1
+|  Step 9 of 30. Elapsed 0:00:00.8 ETA 0:00:01.21.000e-03         13       4.88e-02    40.5    0.0    0.8   37.2   21.4
+/  Step 10 of 30. Elapsed 0:00:00.9 ETA 0:00:01.01.100e-03         11       4.39e-02    38.1    0.0    0.8   33.0   28.1
+-  Step 11 of 30. Elapsed 0:00:00.9 ETA 0:00:00.81.200e-03         10       4.29e-02    35.4    0.0    0.7   36.3   27.6
+\  Step 12 of 30. Elapsed 0:00:01.0 ETA 0:00:00.81.300e-03          6       5.18e-02    17.6    0.0    0.4   25.4   56.6
+|  Step 13 of 30. Elapsed 0:00:01.0 ETA 0:00:00.91.400e-03         18       6.39e-02    42.9    0.0    0.9   20.6   35.6
+/  Step 14 of 30. Elapsed 0:00:01.1 ETA 0:00:01.01.500e-03          7       1.11e-01     9.6    0.0    0.2   77.7   12.5
+-  Step 15 of 30. Elapsed 0:00:01.2 ETA 0:00:01.71.600e-03          6       5.36e-02    17.0    0.0    0.4   34.6   48.0
+\  Step 16 of 30. Elapsed 0:00:01.2 ETA 0:00:00.81.700e-03         15       7.94e-02    28.7    0.0    0.6   57.6   13.1
+|  Step 17 of 30. Elapsed 0:00:01.3 ETA 0:00:01.01.800e-03          8       2.59e-02    47.0    0.0    1.0   43.3    8.7
+/  Step 18 of 30. Elapsed 0:00:01.3 ETA 0:00:00.31.900e-03         10       7.24e-02    21.0    0.0    0.4   64.8   13.8
+-  Step 19 of 30. Elapsed 0:00:01.4 ETA 0:00:00.82.000e-03          4       9.05e-02     6.7    0.0    0.1   73.5   19.6
+\  Step 20 of 30. Elapsed 0:00:01.5 ETA 0:00:00.92.100e-03          8       3.42e-02    35.6    0.0    0.7   47.7   15.9
+|  Step 21 of 30. Elapsed 0:00:01.5 ETA 0:00:00.32.200e-03         11       6.59e-02    25.4    0.0    0.5   42.2   31.8
+/  Step 22 of 30. Elapsed 0:00:01.6 ETA 0:00:00.52.300e-03          6       4.17e-02    21.9    0.0    0.5   43.9   33.7
+-  Step 23 of 30. Elapsed 0:00:01.7 ETA 0:00:00.32.400e-03          8       4.71e-02    25.9    0.0    0.5   54.8   18.7
+\  Step 24 of 30. Elapsed 0:00:01.7 ETA 0:00:00.32.500e-03          4       3.53e-02    17.5    0.0    0.4   78.5    3.6
+|  Step 25 of 30. Elapsed 0:00:01.7 ETA 0:00:00.22.600e-03          4       3.75e-02    16.3    0.0    0.3   69.7   13.6
+/  Step 26 of 30. Elapsed 0:00:01.8 ETA 0:00:00.22.700e-03          5       3.22e-02    23.7    0.0    0.5   51.9   23.8
+-  Step 27 of 30. Elapsed 0:00:01.8 ETA 0:00:00.12.800e-03          5       3.88e-02    19.6    0.0    0.4   63.8   16.2
+\  Step 28 of 30. Elapsed 0:00:01.8 ETA 0:00:00.12.900e-03          5       4.20e-02    18.2    0.0    0.4   74.1    7.3
+|  Step 29 of 30. Elapsed 0:00:01.9 ETA 0:00:00.03.000e-03          5       7.06e-02    10.7    0.0    0.2   30.0   59.0
+/  Step 30 of 30. Elapsed 0:00:02.0 ETA 0:00:00.0
+Run finished at  : Tue May 15 23:48:48 2012
+
+Run time : 2 s
+Application 7506486 resources: utime ~16s, stime ~0s
+
+ + --------------------------------------------------------------------------
+ +        Job name: bout_hopper_debug.pbs
+ +          Job Id: 1660631.sdb
+ +          System: hopper
+ +     Queued Time: Tue May 15 16:21:49 2012
+ +      Start Time: Tue May 15 16:48:41 2012
+ + Completion Time: Tue May 15 16:48:49 2012
+ +            User: xu
+ +        MOM Host: nid05621
+ +           Queue: debug
+ +  Req. Resources: other=QSUBPID:11289:hopper07,walltime=00:10:00
+ +  Used Resources: cput=00:00:01,mem=0kb,vmem=0kb,walltime=00:00:07
+ +     Acct String: mp2
+ +   PBS_O_WORKDIR: /scratch/scratchdirs/xu/TMP3/bout/examples/test-simple-diffusion
+ +     Submit Args: bout_hopper_debug.pbs
+ + --------------------------------------------------------------------------
+

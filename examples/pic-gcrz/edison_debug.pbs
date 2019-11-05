@@ -1,0 +1,10 @@
+#!/bin/bash -l
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -t 00:30:00
+#SBATCH -L SCRATCH
+#PBS -V
+
+
+#cd $PBS_O_WORKDIR
+srun -n 16 ./gcrz

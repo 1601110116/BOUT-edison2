@@ -1,0 +1,172 @@
+# settings file for BOUT++
+# gc case
+
+##################################################
+# Global settings used by the core code
+
+NOUT = 100         #time-steps
+TIMESTEP = 10       # time between outputs
+archive = 50        # Archive restart files after this number of outputs
+wall_limit = 1.5  # wall time limit (in hours)
+
+ShiftXderivs = true # use shifted radial derivatives?
+TwistShift = true   # use twist-shift condition?
+ShiftOrder = 0      # interpolation order (1 = nearest neighbour, 0=FFT)
+TwistOrder = 0      # order of twist-shift interpolation
+
+MZ = 65             # number of points in z direction (2^n + 1)
+ZPERIOD = 5        # Fraction of a torus to simulate
+
+MXG = 2
+MYG = 2
+
+NXPE = 1            # Number of processor in X
+
+#grid = "data/cbm18_8_y064_x516_090309.nc"  # Grid file
+#grid = "data/cbm18_dens8.grid_nx68ny64.nc" # Grid file
+#grid = "data/eastNx68Ny128.nc"               # Grid file
+#grid = "data/eastNx68Ny64SN.nc"             #Grid file
+#grid = "data/g38300_132X64_0.9_0.99.nc"
+#grid = "data/g38300_132X64_0.6_0.95.nc"
+#grid = "data/g38300_516X64_0.6_0.95.nc"
+#grid = "data/g38300_516X64_0.6_0.99.nc"
+#grid = "data/cbm18_dens8_gfile_132X64_0.4_0.8.nc"
+#grid = "data/cbm18_dens8_gfile_516X64_0.4_0.8.nc"
+#grid = "data/g38300_132X64_0.9-1.02.nc" #lower single null
+#grid = "data/east056129.05550_2_x516y128_psi020to105.nc"
+#grid = "data/east056129.05550_2_x516y128_psi060to105.nc"
+#grid = "data/g056129.05550_2_x128y64_psi090to105.nc"
+#grid = "data/g056129.05550_2_x132y64_psi090to105.nc"
+#grid = "data/g056129.05550_2_x260y64_psi090to106_fitTe_decresePF_gaussianY.nc"
+#grid = "data/g056129.05550_2_x260y64_psi090to106_fitTe_decresePF_gaussianY_RF_thermal.nc"
+#grid = "data/g056129.05550_2_x260y64_psi070to106_fitTe_decreasePF_gaussianY.nc"
+#grid = "data/g056129.05550_2_x260y64_psi090to106_thermal_RFSBC.nc"
+grid = "data/g056129.05550_2_x260y64_psi090to106_thermalSBC.nc"
+#grid = "data/CMod_1100223012_1150_260x64y_0.9psi_v0.bout.nc"
+
+dump_format = "nc"      # Dump file format. "nc" = NetCDF, "pdb" = PDB
+restart_format = "nc"   # Restart file format
+
+StaggerGrids = false    # Use staggered grids (EXPERIMENTAL)
+
+##################################################
+# Communications
+# Fastest setting depends on machine and MPI
+# implementation. Do not affect result.
+
+[comms]
+
+async = false           # Use asyncronous sends?
+pre_post = false        # Post receives as early as possible
+group_nonblock = false  # Use non-blocking group operations?
+
+##################################################
+# Laplacian inversion routines
+
+[laplace]
+
+# max_mode = 16  # Maximum N to solve for
+
+##################################################
+# FFTs
+
+[fft]
+
+fft_measure = true  # If using FFTW, perform tests to determine fastest method
+
+##################################################
+# derivative methods
+
+[ddx]
+
+first = C4  # order of first x derivatives (options are 2 or 4)
+second = C4 # order of second x derivatives (2 or 4)
+upwind = W3 # order of upwinding method (1, 4, 0 = TVD (DO NOT USE), 3 = WENO)
+
+[ddy]
+
+first = C4
+second = C4
+upwind = W3
+
+[ddz]
+
+first = C4  # Z derivatives can be done using FFT
+second = C4
+upwind = W3
+
+##################################################
+# Solver settings
+
+[solver]
+
+# mudq, mldq, mukeep, mlkeep preconditioner options
+ATOL = 1.0e-8 # absolute tolerance
+RTOL = 1.0e-5  # relative tolerance
+
+use_precon = false    # Use preconditioner: User-supplied or BBD
+use_jacobian = false  # Use user-supplied Jacobian
+
+mxstep = 100   # Number of internal steps between outputs
+adams_moulton = false # Use Adams-Moulton method (default is BDF)
+func_iter = false     # Functional iteration (default is Newton)
+
+##################################################
+# settings for gc
+
+[gc]
+
+AA = 1.0
+ZZ = 1.0
+Ti = 1.0e2
+v_para = 0.2 #0.2, 0.9
+#rr = 2.27
+#rz = 0.0
+
+#rr=2.288800
+#rz=-0.037802
+
+#rr=2.27455
+#rr=2.28
+#rr=2.26
+#rz=0.0137293
+#rr=2.26
+#rz=0.0
+
+#at g.rxy(g.IXSEPS1-1,38),g.zxy(g.IXSEPS1-1,38)
+#rr=2.27145
+#rz=-0.0454466
+
+#at g.rxy(0,38),g.zxy(0,38)
+rr=2.24395
+rz=-0.0440347
+
+#at g.rxy(86,22),g.zxy(86,22) CMod
+#rr = 0.470028
+#rz = -0.0207394
+
+rp = 0.0
+dt = 0.2	#time step
+maxstep = 10	#number of time-steps
+interpn = 4 #2,3,4 points interpolation, i.e. linear, quadratic, cubic.
+            #Actually, B-spline interpolation is used and this option is unvalid now. 
+flagEle = 0 #0(no electric field), or 1 (include Electric field)
+flagphi = 1 #0(phi0, equilibrium phi is used), or 1 (phi1, perturbed phi is used)
+flag_tb = 0 #0(no random walk), or 1 (random work)
+D_tb = .1  #transport coefficient.
+npic = 199	#total number of particles.
+# boundary conditions
+# -------------------
+# dirichlet    - Zero value
+# neumann      - Zero gradient
+# zerolaplace  - Laplacian = 0, decaying solution
+# constlaplace - Laplacian = const, decaying solution
+#
+# relax( )   - Make boundary condition relaxing
+
+bndry_all = neumann # Default to zero-value
+
+
+[periodic]
+
+bndry_core = neumann

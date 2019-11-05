@@ -1,0 +1,19 @@
+codename="caltrans"
+probname="junkb_32130"
+logname = "junkb_32130.log"
+csc.logunit = basopen(logname,"w")
+baspecho(logunit)
+logunit << "> # Command name:"
+logunit << "> #   /home/rhb/caltrans/corsica/LINUX/caltrans"
+logunit << "> # Options:"
+logunit << "> #  -probname junkb_32130 old_iter.sav fiducials.bas "
+logunit << " "
+output graphics; version; output tty
+read initcom
+read ploteq.ezn
+read macro.vs
+read bessel
+read macro.inv
+character*128 restore_file="old_iter.sav"
+read {restore}.bas
+read "fiducials.bas"

@@ -1,0 +1,7 @@
+#PBS -q debug
+#PBS -l mppwidth=6144	
+#PBS -l walltime=00:30:00
+#PBS -j eo
+cd $PBS_O_WORKDIR
+setenv PAT_RT_SUMMARY 0
+aprun -n 6144 ./tdma >out

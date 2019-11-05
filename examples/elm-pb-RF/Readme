@@ -1,0 +1,7 @@
+Here is the steps to generate the grid file which include the sheath induced equilibrium potential:
+
+1. Run the elm-pb code without sheath boundary condition. Read  'phi0' and save it by the name 'nosbc_phi0.dat'.
+
+2. Turn on the 'SBC_phi' option and turn off the 'phi_ready' option, run the elm-pb code and read the 'phi0'. Inside the separatrix, the 'phi0' gets from the force balance equation. In the SOL, the 'phi0' is the equilibrium sheath potential. The 'phi0' has a jump at the separatrix. Save this 'phi0' by the filename 'phi.dat'.
+
+3. Run the IDL function 'phi_fit_3.pro' in this folder. Use the mouse to smoothly connect the Er in SOL and the Er inside the separatrix together. Clip the right button to finish the fix. The new Phi0 will be write into the orginal grid file. The variable name is 'Phi0' in the grid file, which could be directly used in the simulation.

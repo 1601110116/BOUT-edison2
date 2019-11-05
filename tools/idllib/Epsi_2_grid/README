@@ -1,0 +1,5 @@
+Steps:
+1) .r ../slatec_bvalu.pro; compiles slatec_bvalu, assuming that libslatec.so exoists, otherwise need to go ../slatec to compile
+2) .r Epsi_2_grid.pro ; compiles
+3) @cmod.1080321020.01200.spline_fit.pro ; read the b-spline knots and coefficients
+4) Epsi_2_grid, tt, coef, 'cmod.1080321020.01200.x68_y64.fast.Er.grd.nc'

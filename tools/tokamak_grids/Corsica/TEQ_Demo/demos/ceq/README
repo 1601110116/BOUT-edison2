@@ -1,0 +1,18 @@
+===============================================================================
+
+This directory contains the following ceq demonstrations:
+
+  (1) ceq1.bas      : 1 constraint (betap)
+  (2) ceq3.bas      : 3 constraints (profile parameters)
+  (3) ceqx.bas      : a mal-formed problem
+  (4) eob.bas       : an EOB state (6 constaints)
+  (5) li-survey.bas : complex logic
+
+Execute with:
+
+  caltrans <save-file> <demo-script>
+
+Either save-file (iter_sof.sav or iter_sob.sav) may be used for demos 1-3.
+Demo 4 should start with the SOB state and demo 5 with the SOF state.
+
+===============================================================================

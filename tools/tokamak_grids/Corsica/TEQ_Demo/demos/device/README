@@ -1,0 +1,26 @@
+===============================================================================
+
+This directory contains a demonstration of updating an ITER model for a new
+device configuration. It could be applied to any tokamak model.
+
+The procedure is:
+
+  (1) write *.in containing specifications for new configuration;
+  (2) start-up Corsica with an old save-file;
+  (3) read standard script device.bas
+  (4) execute the read_device routine
+  (5) switch to eq package (if necessary)
+  (6) execute an equilibrium calculation
+  (7) save the new model.
+
+For example...
+
+	caltrans old_iter.sav device.bas
+	package eq
+	read_device
+	run
+	saveq("new_iter.sav")
+
+NOTE: See also the fiducials demo.
+
+===============================================================================

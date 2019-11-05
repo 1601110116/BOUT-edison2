@@ -1,0 +1,47 @@
+===============================================================================
+
+A "dead-start" is a Corsica session where an equilibrium is establised without
+a previously saved solution (i.e., from a save-file).
+
+This directory contains two input files for an early version of FDF[1]:
+
+	tokamak.inp  : Plasma parameters & grid specification
+	coils.inp    : PF coil specifications
+
+The Corsica standard script file 'tokamak.bas' contains a dead-start procedure
+which reads these files (and others, if available) to produce a "starting-
+point" equilibrium which will be preserved in a save-file. Preparation of the
+input files for the dead-start procedure and usage examples are described in
+the document "Creating Tokamak Equilibria with Corsica"[2].
+
+Briefly, start-up the code *without* a save-file and read the tokamak.bas
+script file:
+
+	caltrans tokamak.bas
+
+Execute the 'tokamak_ds' procedure (or its synonym, 'ds') with one or both
+intput files:
+
+	ds("tokamak.inp")  # PF coils will be automatically generated
+
+or:
+
+	ds("tokamak.inp", "coils.inp")  # Use coil set in coils.inp file
+
+A new save-file will be created at the end of the dead-start procedure. It will
+be the starting point for refinements to the equilibrium and/or the device
+configuration.
+
+Execute the two demo scripts in this directory:
+
+	caltrans -probname fdf2 demo1.bas
+
+	caltrans fdf2.sav demo2.bas
+
+
+References:
+
+	[1] https://fusion.gat.com/fdf/files/tps-garofalo-2040168-x.pdf
+	[2] http://wormhole.ucllnl.org/software/corsica/tokamak_ds.pdf
+
+===============================================================================

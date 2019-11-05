@@ -1,0 +1,30 @@
+1) idlde
+
+2) open project -> GKV
+
+3) compile -> all files
+
+4) GKV>GKV_init
+
+5) restore, '<file>.dat' ;BOUT data etc.
+
+6)***Creating an object from data:
+GKV>phi=GKV_Create_Object(phi_0_63, tValues=t_array, title='phi', mnemonic='phi')
+phi -> set, axis=2, boundary='periodic (closed)'
+
+7)***Calculating cross-correlation:
+GKV>refPhi=phi->slice(theta=38)
+GKV>objectCorrs = phi -> xcorr(ref=refPhi)
+
+8)***Normalization:
+refStats = refPhi -> stats()
+norm=refStats.std^2
+objectCorrs = objectCorrs -> over(norm)
+
+9)***Viewing cross-correlation tau slice and a movie:
+GKV>objectCorrs -> view, /pretty, tau=0
+GKV>objectCorrs -> movie, /pretty, charsize=1.5
+
+
+GKV>fobjectCorrs = objectCorrs -> filter(1, dl=3)
+GKV>fobjectCorrs -> view, /pretty, tau=0, vrange=[-1,1]

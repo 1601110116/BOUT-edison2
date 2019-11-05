@@ -1,0 +1,10 @@
+The switch of the electric field calculation is 'iterative_phi0'. You can search this word in the code.
+
+The RF sheath boundary condition on the limiter surface at outer-middle plane is applied by this sentence:
+    "ddt(U00) = -(B0/(eta_sh*sbc_lambda1))*Grad2_par2_sh(phi01,phish1)"
+    The 'phish1' is the RF sheath. In the function 'Grad2_par2_sh', when doing the parallel derivative in SOL (Normalized Psi>1), the 'phish1' is used. 
+
+The thermal sheath boundary condition is applied on the divertor surface by the sentence:
+    "SBC_Dirichlet(phi01, phish0);"
+    The 'phish0' is applied in the poloidal guide cell from inner to outer radial boundary.
+    

@@ -1,0 +1,9 @@
+#PBS -q debug
+#PBS -l mppwidth=512
+#PBS -l mppnppn=12
+#PBS -l walltime=00:30:00
+#PBS -j eo
+#PBS -V
+
+cd $PBS_O_WORKDIR
+aprun -n 512 -N 12 -S 3 /global/u2/t/tnrhee/bout++/examples/elm-pb-4fields-wci/elm_pb_4f_gyp5 > stdout.log

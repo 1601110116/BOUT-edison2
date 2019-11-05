@@ -1,0 +1,23 @@
+When running elm-pb with default options, on hopper or edison.nersc.gov, 
+for 20 min debug job, by using the following command 
+>qsub bout_hopper_debug.cmd
+the result for linear growth rate is shown in plots:
+gr_n15_cbm18_8_y064_x516_090309.ps and
+gr_n15_cbm18_dens8.grid_nx68ny64.ps.
+
+IDL>  p = collect(path="data", var="P")
+IDL> moment_xyzt, p, rms=rms
+IDL> plot, deriv(alog(rms[327,32,*]))   ;(for cbm18_8_y064_x516_090309.nc)
+or
+IDL> plot, deriv(alog(rms[42,32,*]))    ;(for cbm18_dens8.grid_nx68ny64.nc)
+
+For low resolution mesh nx=68, data/cbm18_dens8.grid_nx68ny64.nc, 
+the growth rate is 0.209213 *Alfven time.
+
+For high resolution mesh nx=516, data/cbm18_8_y064_x516_090309.nc
+the growth rate is 0.176896 *Alfven time.
+
+The diference is 18%.
+
+
+

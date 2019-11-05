@@ -1,0 +1,382 @@
+
+FUNCTION GENE_ReadVSP, 	fileName, ParamStr=ParamStr,	$
+			path=path, _Extra=Extra
+;
+; This function reads the vsp.dat file output
+; by GENE, and returns these fields as GKVs4D objects
+; (vs. Vppl, Mu, theta, and t).
+;
+; Arguments:
+;
+;	fileName	Name of the vsp.dat file to be analyzed.
+;			Defaults to "vsp.dat". (optional).
+;
+; Keywords:
+;
+;	Path		Path to structure containing the 
+;			desired vsp.dat file. Defaults
+;			to current working directory.
+;			(Optional)
+;
+;	ParamStr	Structure created by GENE_ReadParameters
+;			which contains various parameters (from
+;			the parameters.dat file) required
+;			to read the vsp files.  	
+;
+;	nz		Number of grid points in z.
+;			Default is to compute from data in
+;			'parameters.dat' file.
+;			(Optional)
+;
+;	nVppl		Number of grid points in v_parallel.
+;			Defaluts to value in 'parameters.dat'
+;			file. (Optional)
+;
+;	nMu		Number of grid points in Mu.
+;			Defaluts to value in 'parameters.dat'
+;			file. (Optional)
+;
+;	Lv		Extent of the simulation box in v_parallel
+;			in units of the thermal velocity, SQRT(2T/M)
+;			(note SQRT(2) in this definition).  Simulation
+;			domain extends from -Lvppl*vth to +Lvppl*vth.
+;			Defaults to value in 'parameters.dat' file.
+;			(Optional)
+;
+;	Lmu		Extent of the simulation box in magnetid 
+;			moment in units of the T_j0/B_ref.  Simulation
+;			domain extends from 0 to +Lmu*T_0j/B_ref.
+;			Defaults to value in 'parameters.dat' file.
+;			(Optional)
+;
+;	nt_vsp		Set to number of time-steps in the
+;			vsp.dat file. Default is to compute  
+;			from data in 'parameters.dat' file.
+;			(Optional)
+;
+;	Endian		The "Endianness" of the vsp.dat file.
+;			Defaults to value in the 'parameters.dat' 
+;			file (which, in my limited experience, is
+;			usually 'little'). (Optional)
+;
+;	Start		Length (in bytes) of header in binary files
+;			Defaults to 4. (Optional)
+;
+;	EOR		Length (in bytes) of "end of record" mark
+;			in binary files. Defaults to 8. (Optional)
+;
+;	L_ref		Set this to a Hershey vector font string identifying the the (macroscopic) 
+;			reference length.  Defaults to "R!D0!N".  (Optional)
+;
+;	CodeName	Set to a string constant containing the desired 'CodeName' (ascii field appearing at the
+;			penultimate line at the lower left hand corner of the plot).
+;			Defaults to 'GENE'. (Optional)
+;
+;	CodePI		Set to a string constant containing the desired 'CodePI' (ascii field appearing at the
+;			last line at the lower left hand corner of the plot).  
+;			Defaults to "F. Jenko". (Optional)
+;
+;
+;	FileID		Set to a string constant containing the desired 'FileID' (ascii field appearing at the 
+;			last line in the lower right hand corner of the plot).  This value will over ride 
+;			the GENE .dat filename. (Optional)
+;
+;	RunID		Set to a string constant containing the desired 'RunID' (ascii field appearing in the 
+;			penultimate line at the lower right hand corner of the plot).  (Optional)
+;
+; Written by W.M. Nevins
+;	10/22/2008
+;
+nArgs = N_PARAMS()
+If(nArgs EQ 0) THEN BEGIN
+	fileName="vsp.dat"
+	MESSAGE, "Using default filename, 'vsp.dat'", /INFORMATIONAL
+ENDIF
+CD, CURRENT=CurrentWorkingDirectory
+IF(Query_String(path)) THEN CD, path
+ok = FINDFILE(fileName, Count=nfiles)			; Check if filename points to a valid file
+IF (nfiles NE 1) THEN BEGIN				; 	we didn't find a file... 
+	MESSAGE, "Couldn't find vsp file, " + fileName, /INFORMATIONAL
+	CD, CurrentWorkingDirectory
+	RETURN, 0
+ENDIF
+;
+; Get FileID, etc.
+;
+L_ref = "R!D0!N"
+result = GetKeyWord('L_ref', Extra)
+IF(Query_String(result)) THEN BEGIN
+	IF(result NE 'undefined') THEN L_ref=result
+ENDIF
+
+CodeName =  "GENE"
+result = GetKeyWord('CodeName', Extra)
+IF(Query_String(result)) THEN BEGIN
+	IF(result NE 'undefined') THEN CodeName=result
+ENDIF
+
+CodePI   = "F. Jenko"
+result = GetKeyWord('CodePI', Extra)
+IF(Query_String(result)) THEN BEGIN
+	IF(result NE 'undefined') THEN CodePI=result
+ENDIF
+
+FileID = "VSP File"
+result = GetKeyWord('FileID', Extra)
+IF(Query_String(result)) THEN BEGIN
+	IF(result NE 'undefined') THEN FileID=result
+ENDIF
+
+RunID = ""
+result = GetKeyWord('RunID', Extra)
+IF(Query_String(result)) THEN BEGIN
+	IF(result NE 'undefined') THEN RunID=result
+ENDIF
+;
+; Get a free I/O unit, and open FIELD.dat file
+;
+GET_LUN, ioUnit
+OPENR, ioUnit, fileName, ERROR=err
+IF(err NE 0) THEN BEGIN
+	PRINT, "Error opening FIELD file:
+	PRINT, "Error Message = ", !ERR_STRING
+	CD, CurrentWorkingDirectory
+	RETURN, 0
+ENDIF
+;
+; Compute size of vsp data using data from 
+; parameter structure.
+;
+IF(TypeOf(ParamStr) EQ 8) THEN BEGIN
+	nMoments = 5L
+	nZ	 = ParamStr.BOX.NZ0
+	nVppl	 = ParamStr.BOX.NV0
+	nMu	 = ParamStr.BOX.NWO
+	Lv	 = ParamStr.BOX.LV
+	Lmu	 = ParamStr.BOX.LW
+	nt	 = ParamStr.INFO.ITIME/ParamStr.IN_OUT.ISTEP_VSP
+	Endian	 = ParamStr.INFO.ENDIANNESS
+	Endian	 = STRLOWCASE(Endian)
+	Endian	 = STRCOMPRESS(Endian, /REMOVE_ALL)
+ENDIF
+;
+; Check if this information is available from the command line.
+; 
+
+result = GetKeyWord('nz', EXTRA)
+IF(Query_Integer(result)) THEN nz=result
+
+result = GetKeyWord('nVppl', EXTRA)
+IF(Query_Integer(result)) THEN nVppl=result
+
+result = GetKeyWord('nMu', EXTRA)
+IF(Query_Integer(result)) THEN nMu=result
+
+result = GetKeyWord('Lv', EXTRA)
+IF(Query_Integer(result)+Query_Real(result)) THEN Lv=result
+
+result = GetKeyWord('LMu', EXTRA)
+IF(Query_Integer(result)+Query_Real(result)) THEN LMu=result
+
+result = GetKeyWord('nt_vsp', EXTRA)
+IF(Query_Integer(result)) THEN nt=result
+
+result = GetKeyWord('Endian', Extra)
+IF(Query_String(result)) THEN BEGIN
+	IF(result NE 'undefined') THEN BEGIN
+		Endian=STRLOWCASE(result)
+		Endian=STRCOMPRESS(Endian, /REMOVE_ALL)
+	ENDIF
+ENDIF
+
+;
+; Some key constants garnared from close
+; inspection of a sample field.dat file:
+;
+start = 4L	; The FIELD.dat file begins with a 4 byte field
+EOR = 8L	; Each record is separated by an 8 byte field
+;
+; These may be operating system dependent,
+; (but, as per note from Florian Merz
+;  of 10/22/08 they are not) 
+; so have allow the user to change 
+; "start" and "EOR" from the command line
+;
+result = GetKeyWord("start", Extra)
+IF(Query_Integer(result)) THEN start = result
+
+result = GetKeyWord("EOR", Extra)
+IF(Query_Integer(result)) THEN EOR = result
+;
+; Size of each Moment block (in bytes)
+;
+nMomentBytes = 2L*8L*nVppl*nMu*nZ
+;
+; Compute number of bytes between time values
+;
+iSkip = 8 + EOR + nMoments*(nMomentBytes + EOR)
+;
+; Read values of t at which fields are written
+;
+t=DBLARR(nt)
+FOR i=0,nt-1 DO	$
+	t[i] = READ_BINARY(ioUnit, DATA_START=start+i*iSkip, DATA_TYPE=5, DATA_DIMS=1, ENDIAN=Endian)
+;
+; Read Gamma_ES values
+;
+thisStart = start + 8L + EOR
+Gamma_ES = DCOMPLEXARR(nVppl, nMu, nz, nt)
+FOR i=0,nt-1 DO	BEGIN
+	Gamma_ES[*,*,*,i]=READ_BINARY(ioUnit, DATA_START=thisStart+i*iSkip, DATA_TYPE=9, DATA_DIMS=[nVppl,nMu,nz], ENDIAN=Endian)
+ENDFOR
+;
+; Read Gamma_EM values 
+;
+thisStart = start + 8L + EOR + nMomentBytes + EOR
+Gamma_EM = DCOMPLEXARR(nkx, nky, nz, nt)
+FOR i=0,nt-1 DO	BEGIN
+	Gamma_EM[*,*,*,i]=READ_BINARY(ioUnit, DATA_START=thisStart+i*iSkip, DATA_TYPE=9, DATA_DIMS=[nVppl,nMu,nz], ENDIAN=Endian)
+ENDFOR
+;
+; Read Q_ES values 
+;
+thisStart = start + 8L + EOR + 2L*(nMomentBytes + EOR)
+Q_ES = DCOMPLEXARR(nkx, nky, nz, nt)
+FOR i=0,nt-1 DO	BEGIN
+	Q_ES[*,*,*,i]=READ_BINARY(ioUnit, DATA_START=thisStart+i*iSkip, DATA_TYPE=9, DATA_DIMS=[nVppl,nMu,nz], ENDIAN=Endian)
+ENDFOR
+;
+; Read Q_EM values 
+;
+thisStart = start + 8L + EOR + 3L*(nMomentBytes + EOR)
+Q_EM = DCOMPLEXARR(nkx, nky, nz, nt)
+FOR i=0,nt-1 DO	BEGIN
+	Q_EM[*,*,*,i]=READ_BINARY(ioUnit, DATA_START=thisStart+i*iSkip, DATA_TYPE=9, DATA_DIMS=[nVppl,nMu,nz], ENDIAN=Endian)
+ENDFOR
+;
+; Read df_rms values 
+;
+thisStart = start + 8L + EOR + 4L*(nMomentBytes + EOR)
+dF_rms = DCOMPLEXARR(nkx, nky, nz, nt)
+FOR i=0,nt-1 DO	BEGIN
+	dF_rms[*,*,*,i]=READ_BINARY(ioUnit, DATA_START=thisStart+i*iSkip, DATA_TYPE=9, DATA_DIMS=[nVppl,nMu,nz], ENDIAN=Endian)
+ENDFOR
+;
+; Create GKV Object to hold Gamma_ES
+;
+ObjStr = {GKVs4D}
+ObjStr.mnemonic = "Gamma_ES"
+ObjStr.title    = "!4C!X!DES!N"
+ObjStr.indices  = PTR_NEW(["*","*","*","*"])
+ObjStr.units    = "(!4q!X!Ds!N/" + L_ref + ")!U2!Nn!D0!Nc!Ds!N"
+ObjStr.values   = PTR_NEW(Gamma_ES)
+	vMin    = GKVsd_MIN(Gamma_ES, MAX=vMax)
+ObjStr.vrange   = [vMin, vMax]
+ObjStr.CodeName = CodeName
+ObjStr.CodePI   = CodePI
+ObjStr.RunID    = RunID
+ObjStr.fileID   = FileID
+
+vGrid = {Grid}
+	vGrid.mnemonic  = 'Vppl'
+	vGrid.title     = 'v!D!9#!X!N'
+	vGrid.units     = 'v!Dth!N'
+	dV		= 2.*LV/(nV-1)
+	Vmax		= Lv
+	vValues		= -Vmax + dV*FINDGEN(nV)
+	vGrid.values    = PTR_NEW(vValues)
+	vGrid.boundary  = "open"
+	vGrid.range     = [-Vmax, Vmax]
+	xGrid.irange    = [0, nV-1]
+ObjStr.grid1 = vGrid
+
+muGrid = {Grid}
+	muGrid.mnemonic = 'Mu'
+	muGrid.title    = '!4l!X'
+	muGrid.units    = 'T!Dref!N/B!Dref!N'
+	dMu		= Lmu/(nMu-1)
+	muValues	= dMu*FINDGEN(nMu)
+	muGrid.values    = PTR_NEW(muValues)
+	muGrid.boundary  = "closed/open"
+	muGrid.range     = [0, Lmu]
+	muGrid.irange    = [0, nMu-1]
+ObjStr.grid2 = muGrid
+
+zGrid = {Grid}
+	zGrid.mnemonic  = 'theta'
+	zGrid.title     = '!4h!X'
+	zGrid.units     = ''
+	Lz		= 2.*!PI
+	dz		= Lz/nz
+	zValues		= -Lz/2. + dz*FINDGEN(nz)
+	zGrid.values    = PTR_NEW(zValues)
+	zGrid.boundary  = "open"
+	zGrid.range     = [-Lz/2., (Lz/2.-dz)]
+	zGrid.irange    = [0, nz-1]
+ObjStr.grid3 = zGrid
+
+tGrid = {Grid}
+	tGrid.mnemonic  = 't'
+	tGrid.title     = 't'
+	tGrid.units     = L_ref + '/c!Ds!N'
+	tGrid.values    = PTR_NEW(t)
+	tGrid.boundary  = "open"
+	tGrid.range     = [t[0], t[nt-1]]
+	tGrid.irange    = [0,nt-1]
+ObjStr.grid4 = tGrid
+
+Gamma_ESObj = OBJ_NEW("GKVs4D", ObjStr)
+;
+; Prepare output structure
+;
+output = {	Name	:	"GENE_ReadVSP",	$
+		Gamma_ES:	Gamma_ESObj	}
+;
+; Make Gamma_EM object 
+;
+Gamma_EMObj = Gamma_ESObj -> MakeCopy(/NoValues)
+Gamma_EMObj -> Set,	title="!4C!X!DEM!N"
+Gamma_EMObj -> Set,	mnemonic="Gamma_EM"	
+Gamma_EMObj -> Set,	values = PTR_NEW(Gamma_EM)
+vMin    = GKVsd_MIN(Gamma_EM, MAX=vMax)
+Gamma_EMObj -> Set, vRange=[vMin, vMax]
+output  = CREATE_STRUCT(output, "Gamma_EM", Gamma_EMObj)
+;
+; Make Q_ES object 
+;
+Q_ESObj = Gamma_ESObj -> MakeCopy(/NoValues)
+Q_ESObj -> Set, title="Q!DES!N"
+Q_ESObj -> Set, mnemonic="Q_ES"	
+Q__ESObj -> Set, values = PTR_NEW(Q_ES)
+vMin    = GKVsd_MIN(Q_ES, MAX=vMax)
+Q_ESObj -> Set, vRange=[vMin, vMax]
+output  = CREATE_STRUCT(output, "Q_ES", Q_ESObj)
+;
+; Make a Q_EM object 
+;
+Q_EMObj =  Q_ESObj -> MakeCopy(/NoValues)
+Q_EMObj -> Set,	title="Q!DEM!N"
+Q_EMObj -> Set,	mnemonic="Q_EM"	
+Q_EMObj -> Set,	values = PTR_NEW(Q_EM)
+vMin    = GKVsd_MIN(Q_EM, MAX=vMax)
+Q_EMObj -> Set, vRange=[vMin, vMax]
+output  = CREATE_STRUCT(output, "Q_EM", Q_EMObj)
+;
+; Make a dF_rms object 
+;
+dF_rmsObj = Q_EMObj -> MakeCopy(/NoValues)
+dF_rmsObj -> Set, title="!12<!4d!Xf!U2!N!12>!X!U1/2!N"
+dF_rmspObj -> Set, Units="(!4q!X!Ds!N/" + L_ref + ")(n!D0!N/v!Dth!U3!N"
+dF_rmsObj -> Set, mnemonic="dF_rms"	
+dF_rmsObj -> Set, values = PTR_NEW(dF_rms)
+vMin    = GKVsd_MIN(dF_rms, MAX=vMax)
+dF_rmsObj -> Set, vRange=[vMin, vMax]
+output  = CREATE_STRUCT(output, "dF_rms", dF_rmsObj)
+;
+; ane we're done!
+;
+FREE_LUN, ioUnit
+CD, CurrentWorkingDirectory
+RETURN, output
+
+END ; ****** GENE_ReadVSP ****** ;

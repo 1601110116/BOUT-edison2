@@ -1,0 +1,38 @@
+Frame     1 (junkv_070850.001.ncgm)
+Corsica  (caltrans)
+Created on 06/02/05 at 02:40:26
+Run at 10:03:50 on 06/30/05 on the i686 machine
+Basis 12.1.1141
+History Package H2 Version 7.1
+PFB 5.2
+EZN Graphics Interface Version 5.9
+EZD Graphics Devices 3.7 GKS
+Frame     2 (junkv_070850.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     2 (junkv_070850.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plotp x(1:5,)*metric y(1:5,)*metric color=cmap("PFCoils")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   plotp xp yp color=fgcolor
+A   4.545E+06  B   9.090E+06  C   1.364E+07  D   1.818E+07  E   2.273E+07
+F   2.727E+07  G   3.182E+07  H   3.636E+07  I   4.091E+07  J   4.545E+07
+K   0.000E+00

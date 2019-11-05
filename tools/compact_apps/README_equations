@@ -1,0 +1,50 @@
+Simulate the tri-diagonal matrix algorithm implemented in BOUT++ matrix inversion. 
+In this, information is passed around a la serial mode to each row in order to convert to an upper triangular matrix.
+Therefore, each successive core has to wait for information from the previous, and therefore remains idle until that information arrives.
+
+Solve for u in the equation 
+
+d^2 u/dx^2 = -1
+
+with BCs
+
+u(0) = 0, u(1) = 0. 
+
+The solution to this equation is u= 1/2(x-x^2) with the maximum y(x=1/2) = 1/8.
+
+Use second order central difference scheme to discretize.
+
+After discretizing, we get 
+
+u_{i+1} - 2 u_i +u_{i+1} = h^2 f (where f=-1, and h=1/N is the grid spacing, with N+1 grid points).
+
+Thus, the tridiagonal system 
+
+a_i u_{i-1} + b_i u_i +c_i u_{i+1} = f_i 
+
+is to be inverted. For the TDMA or Thomas algorithm, we eliminate a_i for a given row by doing a row operation
+
+A=(-2 1 
+      1 -2 1
+	 ....
+		-2 1)
+
+Get rid of a_i as follows
+
+Define R_n-> R_n - R_{n-1} *a_n/b_{n-1} 
+
+We will then get 
+
+A=(-2 1
+      ....
+	0 b_n c_n
+		....
+		   b_N) 
+
+Now proceed backwards. First solve for u_N = f_N/b_N. Now we can backsubstitute for u_{n+1} in 
+	
+b_n u_n +c_n u_{n+1} = f_n
+
+or u_n = (f_n - c_n u_{n+1})/b_n
+		
+

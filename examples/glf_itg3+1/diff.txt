@@ -1,0 +1,31 @@
+75d74
+< bool add_qperp_FLR_nonlin;
+79d77
+< bool add_q_gradparlnB;
+147d144
+<     OPTION(options, add_qperp_FLR_nonlin, false);
+159d155
+<     OPTION(options, add_q_gradparlnB, true); 
+470d465
+<      qperp_nl = sqrt(2.0/M_PI*TiHat_tot)*NiHat*qvar_nl;
+471a467
+>        qperp_nl = -sqrt(2.0/M_PI*TiHat_tot)*NiHat*iSign_kpar(Tperp1);
+494c490
+<       ddt(Pperp) -= delta*delta*bracket(gyroPhi,Pperp,bm);
+---
+>       ddt(Pperp) -= delta*delta*bracket(gyroPhi2,Pperp,bm);
+497,499d492
+<         if(add_qperp_FLR_nonlin){
+<           ddt(Vpar) -= delta*delta*bracket(delgyroPhi,F1BC(qperp_nl/TiHat_tot),bm);
+<         }
+501d493
+<         ddt(Pperp) -= delta*delta*bracket(delgyroPhi,Pperp,bm);
+558,563c550
+< 
+<     if(add_q_gradparlnB){
+<       return -Div_par(qvar_nl);
+<     }else{
+<       return -Grad_par(qvar_nl);
+<     }
+---
+>     return -Div_par(qvar_nl);

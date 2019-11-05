@@ -1,0 +1,104 @@
+###############################################################################
+# Sloan Digital Sky Survey (SDSS)
+# IDL support code for products: idlmapper, idlspec2d
+#
+# Slatec code in Fortran with C wrappers for calling from IDL
+#
+# S. Burles & D. Schlegel
+# Revised: 04/19/2006 by rjg to work in my environment and mainly
+#                     compile slatec routines
+# Revised: 02/03/2010 by rjg to use pgf95 compiler
+# Revised: 02/03/2010 by rjg to add slatec dfc routine
+###############################################################################
+
+SHELL = /bin/sh
+
+FC=pgf95                     # for Portland Group 
+#FC=lf95                     # For Lahey-Fujitsu
+
+LFOPTS_PL=-g -c -C 
+LFOPTS_PL=-g --chk --info   # For Lahey-Fujitsu
+LFOPTS_PL=-fPIC
+
+.SUFFIXES  :  
+.SUFFIXES  :  .f90 .f .o .c
+
+#
+.c.o :
+	$(CC) -c $(CCCHK) $(CFLAGS) $(X_CFLAGS) $*.c
+
+.f90.o : 
+	$(FC) -c  $<
+
+.f.o :
+	$(FC) -c $(LFOPTS_PL) $<
+#	$(FC) -c $<
+
+
+#
+INC = ../../include
+IDL_DIR=/usr/global/tools/ITT/idl81/idl/idl81
+#IDLUTILS_DIR=/usr/global/tools/ITT/idl81/idl/idl181:/usr/global/tools/ITT/coyote
+
+CFLAGS  =  -I$(IDL_DIR)/external $(SDSS_CFLAGS) -DCHECK_LEAKS -I$(INC)
+
+#LIB = $(IDLUTILS_DIR)/lib
+LIB = /g/g20/xu/local/lib
+
+SO_EXT = so
+
+
+
+# Flag to make a shareable library
+LDFLAGS = -shared         # for Portland Group
+#LDFLAGS = --shared      # for Lahey-Fuitsu
+
+PATH_FLIB=$(WISK)/lib/
+
+
+FLIBF = $(PATH_FLIB)/libfj9f6.a 
+FLIBI = $(PATH_FLIB)/libfj9i6.a    # for jwe_x_init and maybe a few others
+FLIBE = $(PATH_FLIB)/libfj9e6.a
+FLIBC = $(PATH_FLIB)/libfccx86_6a.a  # for __uxlltod
+
+LIBS = $(FLIBI) $(FLIBF) $(FLIBE)   # For Lahey-Fujitsu
+LIBS =  # For Portland Group
+
+
+
+OBJECTS = \
+	bint4.o bndacc.o bndsol.o bnfac.o bnslv.o bsplvn.o bspvd.o bspvn.o \
+	bvalu.o chkder.o csevl.o d1mach.o dasum.o daxpy.o dbint4.o dbintk.o dbndac.o \
+	dbndsl.o dbnfac.o dbnslv.o dbspvd.o dbspvn.o dbvalu.o dckder.o dcopy.o \
+	dcsevl.o ddot.o defc.o defcmn.o denorm.o derf.o derfc.o              \
+        dfcmn.o dfc.o dfdjc3.o dfspvd.o dfspvn.o \
+	dgeco.o dgefa.o dgefs.o dgesl.o dh12.o dintrv.o dlsei.o dlsi.o dhfti.o dlpdp.o    \
+        dmpar.o dnls1.o dnls1e.o dnrm2.o \
+	dp1vlu.o dpcoef.o dpolft.o dpsort.o dqrfac.o dqrslv.o drotmg.o drotm.o dscal.o dsidi.o \
+	dsifa.o dsort.o dswap.o dwnnls.o dwnlit.o dwnlsm.o dwnlt1.o dwnlt2.o dwnlt3.o    \
+        dwupdt.o efc.o efcmn.o enorm.o   \
+        erf.o erfc.o fdjac3.o \
+	fdump.o h12.o i1mach_Linux.o idamax.o idlwrappers.o idlwrappers_f.o initds.o inits.o intrv.o \
+	isort.o j4save.o lmpar.o pcoef.o polfit.o pvalue.o qrfac.o qrsolv.o  \
+	r1mach_Linux.o radb2.o radb3.o radb4.o radb5.o radbg.o radf2.o radf3.o \
+	radf4.o radf5.o radfg.o rand.o rfftb.o rfftb1.o rfftf.o rfftf1.o rffti.o \
+	rffti1.o rgauss.o runif.o rwupdt.o saxpy.o scopy.o sdot.o snls1.o snls1e.o \
+	sscal.o ssort.o sswap.o xercnt.o xerhlt.o xermsg.o xerprn.o xersve.o \
+	xgetua.o xsetf.o 
+
+all : $(LIB)/libslatec.$(SO_EXT)
+
+$(LIB)/libslatec.$(SO_EXT) : $(OBJECTS)  $(LIBS)
+	$(FC) $(LDFLAGS) -o $(LIB)/libslatec.$(SO_EXT) $(OBJECTS) $(LIBS)
+
+#
+# Install things in their proper places in $(IDLUTILS_DIR)
+#
+install :
+	- cp Makefile $(IDLUTILS_DIR)/src/slatec
+	- cp *.f $(IDLUTILS_DIR)/src/slatec
+	- cp *.f90 $(IDLUTILS_DIR)/src/slatec
+	- cp *.c $(IDLUTILS_DIR)/src/slatec
+
+clean :
+	- /bin/rm -f *~ core *.o so_locations

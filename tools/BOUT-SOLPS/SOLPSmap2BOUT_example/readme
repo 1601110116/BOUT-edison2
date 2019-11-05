@@ -1,0 +1,19 @@
+Description for each files:
+b2fstate2grid.m: this routine is used for map SOLPS profiles to BOUT++ nc file
+smooth_bout2D.pro and 2Dsmooth_pre.pro: these two routines are used for 2D smooth of the mapped SOLPS profiles
+nc_decay_PFR.m: this matlab routine is for changing the BOUT++ nc profiles in PFR
+transcoeff_neoturbulent.m: this routine is used for writing BOUT++ transport coefficients to SOLPS input file
+
+Examples for running these scripts to map SOLPS ne, Te, ni, Ti profiles in SOL to BOUT++ nc file, while keep the profiles inside sepratrix unchanged
+
+1) run b2fstate2grid.m matlab routine (now 2 version are ready for use: one for SOLPS pure D case, one for SOLPS D+C case)
+Input for this routine: b2fstati from SOLPS which contains the ne, Te, ni, Ti profiles; .geo file from SOLPS which contains the SOLPS RZ coordinate data;BOUT++ nc file
+
+note:if the interpolated profiles not reasonable, then should adjust the profiles artificially (this problem typically occured in front of targets)
+
+2) run 2Dsmooth_pre.pro idl script, which will 2D smooth the interpolated profiles
+@2Dsmooth_pre.pro
+
+note: if the interpolated profiles changed too much, the keyword "iter" should be adjust smaller
+
+Examples for running SOLPS by using BOUT++ transport coefficients (which need to use the transport coefficients calculated by BOUT++, 'transcoeff_neoturbulent.m' this routine can be used to write the calculated BOUT++ transport coefficients to b2.transport.inputfile), then writing these transport coefficients data to b2.transport.inputfile, the other inputs are regular settings

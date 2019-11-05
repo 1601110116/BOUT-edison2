@@ -1,0 +1,13 @@
+# ITER initialization parameters and constraints
+
+# $Id$
+# $Name$
+
+device ITER 2010-07-30
+configuration Workbook Data_for_study_of_ITER_plasma_magnetic_c_33NHXN_v3_3.xls
+
+# Coil initialization...
+#   PF1  PF2  PF3  PF4  PF5  PF6 CS3L CS2L CS1L CS1U CS2U CS3U VSU VSL ECU ECU ECE ECE ECL ECL TFCBB
+ic    1    2    3    4    5    6    7    8    9    9   10   11   0   0   0   0   0   0   0   0     0
+kA   10   10   10   10   10   10   10   10   10   10   10   10   0   0   0   0   0   0   0   0    49
+ngp   6    6    6    6    6    8    8    8    8    8    8    8   0   0   0   0   0   0   0   0     0

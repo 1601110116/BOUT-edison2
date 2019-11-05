@@ -1,0 +1,1 @@
+PRO GKVS1D::tokHz;; If 'self' has an axis whose mnemonic is 'omega', ; this proceedure will assume units are rad/s, and convert; units of this axis to kHz;; Written by W.M. Nevins;	10/9/01;fConst = 1./(2.*!PI*1000.)self -> ScaleAxis, 'omega', Const=fConst, title='f', mnemonic='f', units='kHz'RETURNEND

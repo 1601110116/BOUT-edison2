@@ -1,0 +1,16 @@
+"EAST" per Weng SOFE 2005
+
+Plasma...
+        1.00 MA       plasma current
+        1.70 m        major radius
+        0.40 m        minor radius
+        0.00 m        Zaxis
+        1.50          95% elongation
+        0.20          95% triangularity
+        0.00 m        Dsep (DN)
+        1.00          poloidal beta
+        0.70          li
+        0.00 Wb       External flux linkage
+
+Toroidal field...
+3.5 T @ R = 1.70 m

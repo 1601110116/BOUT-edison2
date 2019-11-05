@@ -1,0 +1,78 @@
+
+
+(1) Get a executable file 
+    a)	using subversion (svn) on user local linux system to checkout the binary distribution.
+
+    b)	svn checkout http://www.mfescience.org/svn/corsica/trunk
+
+    c) need to get username and password from Bill Meyer <meyer8@llnl.gov>. Note that this is read only access.
+
+    d) Once this is finished, "cd trunk" and then execute "code/bin/caltrans".
+
+   #Note#
+    ... error while loading shared libraries: libgcc_s.so.1 ... No such file or directory
+
+    Follow the direction, if you got the above error message.
+    % cd code/bin/LINUX
+    % ll caltrans
+    ... caltrans -> caltrans.dynamic
+    % rm caltrans
+    % ln -s caltrans.static caltrans
+
+(2) Here is an example of reading a KSTAR "g" file, changing the resolution, and then writing it back out:
+    [meyer8@smaug KSTAR]$ vcaltrans
+    setting CPU_ environment to your value, LINUX
+    using your own BASIS_ROOT environment, /afs/localcell/usr/basis/vbasis
+    Running /afs/fepcluster/usr/Caltrans/vcaltrans/bin/LINUX/caltrans
+    corsica> read kstar.bas
+    corsica> kstar("g004200.01590")
+
+    Restoring reference case: kstar20100815.sav
+
+    PROBLEM NO. 1  eq
+    Calculating Greens functions
+    Calculating pfim
+       3  1 axis(35, 33)= 1.861E+02, 8.577E-06 xpt(16, 15)= 1.395E+02,-9.971E+01 *
+
+       PROBLEM NO. 2  eq   Constructed from a,g004200.01590
+       Calculating pfim
+         70  1 axis(33, 32)= 1.812E+02,-1.314E+00 xpt(18, 15)= 1.427E+02,-9.766E+01 *
+
+	 Check equilibrium...
+	 Enter: (1) RETURN to continue, (2) integer pause time [seconds] or (3) any
+	         other character to interrupt: 1
+		 Pressure
+		 Toroidal flux function
+		 q-profile
+		 Coil currents
+		 Configuration
+
+		 Created equilibrium save-file: 004200_1590.sav
+    corsica> jm
+		 jm =   65
+    corsica> km
+		 km =   65
+    corsica> gridup
+		 Now: jm=129,  km=129, liml=-1
+		 gchange("EqPsiData",0) =   0
+    corsica> jm
+		 jm =   129
+    corsica> km
+		 km =   129
+    corsica> run
+
+		 PROBLEM NO. 3  eq   Constructed from a,g004200.01590
+		 Calculating Greens functions
+		 weqCalculating pfim
+		 dsk
+		   28  1 axis(65, 64)= 1.812E+02,-1.318E+00 xpt(35, 30)= 1.427E+02,-9.766E+01 *
+    corsica> weqdsk
+    corsica> ow
+    corsica> layout(0,0)
+    corsica>
+
+    Finally, you got the 'g004200.01590_teq'.
+
+
+
+(3) The detailed instructions on Equilibrium and Satbility Modelling with Caltrans can be found in TEQ_Demo/docs/d3d_demo.pdf.

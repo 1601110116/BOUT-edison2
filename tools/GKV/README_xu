@@ -1,0 +1,50 @@
+
+bout_analysis.pro
+cab667:xu(GKV)> idl
+IDL>  restore, 'gkv8_v2.sav'     
+IDL>  .compile 'xi_data          
+% Compiled module: XI_DATA.
+IDL>  .compile 'bout_analysis.pro
+% Compiled module: BOUT_TEST.
+IDL>  gkv_init                   
+Initializing GKV Version 1.1
+GKV>test = xi_data()            
+% RESTORE: Portable (XDR) SAVE/RESTORE file.
+% RESTORE: Save file written by xu@cab669, Mon Dec 10 15:47:40 2012.
+% RESTORE: IDL version 8.2 (linux, x86_64).
+% RESTORE: Restored variable: P_T500_2F_XU3.
+% RESTORE: Portable (XDR) SAVE/RESTORE file.
+% RESTORE: Save file written by xu@aztec60, Wed Nov 28 15:15:32 2012.
+% RESTORE: IDL version 8.2 (linux, x86_64).
+% RESTORE: Restored variable: G.
+GKV>help, test                                              
+** Structure <9b6e48>, 5 tags, length=32, data length=32, refs=1:
+   NAME            STRING    'xiData'
+   NI0             OBJREF    <ObjHeapVar11(GKVS1D)>
+   TI0             OBJREF    <ObjHeapVar15(GKVS1D)>
+   P0              OBJREF    <ObjHeapVar19(GKVS1D)>
+   P               OBJREF    <ObjHeapVar26(GKVS4D)>
+GKV>test.p -> view
+% Program caused arithmetic error: Floating divide by 0
+% Program caused arithmetic error: Floating illegal operand
+GKV>test.p -> info
+GKV>p_fft = test.p -> fft('z')
+GKV>p_abssq = p_fft -> abssq()
+GKV>p_arr = objarr(65)
+GKV>for i = 0,63 do p_arr[i] = p_abssq -> slice(k_z=i*5-160)
+GKV>p_arr2 = objarr(65)
+GKV>p_arr3= objarr(65)
+GKV>for i = 0,63 do p_arr2[i] = p_arr[i] -> int('x')
+GKV>for i = 0,63 do p_arr3[i] = p_arr2[i] -> int('y')
+GKV>p_arr3[30] -> view
+GKV>p_arr3[30] -> view, p_arr3[31:40]
+GKV>p_arr3[30] -> view, p_arr3[31:40], /log
+GKV>p_arr3[30] -> view, p_arr3[31:40], /log,  vrange=[1e-12,1]
+GKV>p_arr3[30] -> view, p_arr3[31:40], /log,  vrange=[1e-8,1e-2]
+GKV>p_arr3[30] -> view, p_arr3[31:40], /log,  vrange=[1e-8,1e-2]
+GKV>p_arr3[30] -> view, p_arr3[31:40], p_arr[0], /log,  vrange=[1e-8,1e-2]
+GKV>p_arr3[30] -> view, p_arr3[31:40], p_arr3[0], /log                    
+GKV>p_arr3[30] -> view, p_arr3[0], /log               
+GKV>p_arr3[30] -> view, p_arr3[0], /log, vrange=[1e-16,1]
+
+

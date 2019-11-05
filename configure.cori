@@ -1,0 +1,13 @@
+
+module swap PrgEnv-intel PrgEnv-gnu
+module load cray-petsc/3.5.3.1
+module swap gcc gcc/4.9.3
+module swap cray-mpich cray-mpich/7.2.5
+
+./configure MPICC=cc MPICXX=CC --with-netcdf=/global/u2/c/chma/edison/local --with-fftw=/global/u2/c/chma/edison/local --with-petsc
+
+
+
+#module swap PrgEnv-pgi PrgEnv-gnu
+#module load netcdf
+#./configure MPICC=cc MPICXX=CC --with-netcdf=/opt/cray/netcdf/4.1.1.0/netcdf-gnu --with-fftw=/opt/fftw/3.2.2.1 --with-pdb=/global/homes/u/umansky/PUBLIC/PACT_HOPP2/pact

@@ -1,0 +1,18 @@
+codename="caltrans"
+probname="my-iter"
+logname = "my-iter.log"
+csc.logunit = basopen(logname,"w")
+baspecho(logunit)
+logunit << "> # Command name:"
+logunit << "> #   /afs/fepcluster/usr/Caltrans/vcaltrans/bin/LINUX/caltrans"
+logunit << "> # Options:"
+logunit << "> #  my-iter.sav "
+logunit << " "
+output graphics; version; output tty
+read initcom
+read ploteq.ezn
+read macro.vs
+read bessel
+read macro.inv
+character*128 restore_file="my-iter.sav"
+read {restore}.bas

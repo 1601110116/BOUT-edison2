@@ -1,0 +1,33 @@
+This does a tridiagonal matrix solver solution (Thomas' algorithm) of the equation
+
+d^2y/dx^2= -1 (we can change the RHS arbitrarily)
+subject to BCs, x(0)=x(L)=0
+
+See README_equations for details of algorithm.
+
+The code is written to do weak scaling. Specify the grid points in a processor box by modifying tdma.in.
+Each processor core will instantiate a domain of size N specified in tdma.in.
+
+Building the code
+----------------
+The code runs by default on hopper. Do a make to build the executable.
+Run the batch script (after tweaking for corecount) batch.pbs.
+
+To run on any other machine, one only needs to change the compiler definition in the Makefile. For example,
+on carver, define 
+
+CC=mpiCC in the makefile.
+
+Running
+--------
+
+On hopper, submit the batchscript as is. On carver (or any other) we need to modify the script accordingly.
+
+Postprocessing
+--------------
+The output files will be dumped in the directory dump/. They will contain the solution for each processor core. 
+We need to stich each domain together by parsing and putting them into one file. This can be done by running the 
+ruby parser parse.rb. After running this, the stiched together solution will be deposited in output/. We can parse 
+and plot this by running the matplotlib/python parser plotter.py (or any other, such as gnuplot). This 
+will produce a pdf file containing the solution.
+

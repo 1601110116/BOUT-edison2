@@ -1,0 +1,36 @@
+# ITER coil limits
+# $Id$
+# $Name$
+
+# Name    Imax  Blim1  Ilim1  Blim2  Ilim2  Fz_min  Fz_max  Imbal
+#           kA      T     kA      T     kA      MN      MN     kA
+  PF1        -    6.4     48    6.5     41    -150     110
+  PF2        -    4.8     55    5.0     50     -75      15
+  PF3        -    4.8     55    5.0     50     -90      40
+  PF4        -    4.8     55    5.0     50     -40      90
+  PF5        -    5.7     52    6.0     33     -10     160
+  PF6        -    6.8     52    7.0     41    -190     170        # Subcooled to 0.4 K
+  CS3L       -   12.6     45   13.0     40
+  CS2L       -   12.6     45   13.0     40
+  CS1L       -   12.6     45   13.0     40
+  CS1U       -   12.6     45   13.0     40
+  CS2U       -   12.6     45   13.0     40
+  CS3U       -   12.6     45   13.0     40
+  VSU       60
+  VSL       60
+  ECUA      16
+  ECUB      16
+  ECEA      16
+  ECEB      16
+  ECLA      16
+  ECLB      16
+
+# Vertical force combinations
+  PF3+PF4    -      -      -      -      -     -60      10
+
+# Imbalance current
+  PF2+PF3-PF4-PF5 - -      -      -      -       -       -   22.5
+
+# CS allowable vertical forces (net and repulsion)
+  fzcsmxn    -      -      -      -      -       -      60
+  fzcsmxr    -      -      -      -      -       -     120

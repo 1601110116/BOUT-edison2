@@ -1,0 +1,23 @@
+===============================================================================
+
+This directory contains a demonstration of generating fiducial-state
+equilibria (using ITER as an example). The standard script fiducial.bas
+reads device.bas and executes read_device, so all the *.in files are read.
+
+This is a two step process:
+
+  (1) Create an initial magnetization state, then
+  (2) Create one of more equilibrium fiducials.
+
+Create the initial magnetization state (IM) *without* starting up with a
+save-file:
+
+	caltrans fiducials.bas
+	make_im
+
+Start-up with an *old* save-file to create the other fiducials:
+
+	caltrans <old-save-file> fiducials.bas
+	make_fiducials
+
+===============================================================================

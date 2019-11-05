@@ -1,0 +1,1 @@
+PRO ASCII_File, FILENAME=fileName, HEADER=header, DEPENDENT=dependent, INDEPENDENT=independent;IF(N_ELEMENTS(fileNAme) EQ 0) THEN fileName='data.txt'GET_LUN, lunOPENW, lun, fileNameIF(N_ELEMENTS(header) NE 0) THEN PRINTF, lun, headern=N_ELEMENTS(dependent)FOR i=0, n-1 DO PRINTF, lun, independent[i], dependent[i]CLOSE, lunRETURNEND

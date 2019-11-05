@@ -1,0 +1,7 @@
+#configure file for hopper after update on 07/29/15
+module swap PrgEnv-pgi PrgEnv-gnu
+module load cray-netcdf
+module load fftw
+module load cray-tpsl
+
+./configure MPICC=cc MPICXX=CC --with-fftw=/opt/fftw/3.2.2.1 --with-netcdf=/global/u1/x/xu/PUBLIC/hopper/netcdf-4.0.1 MPICC=cc MPICXX=CC   

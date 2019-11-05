@@ -1,0 +1,17 @@
+codename="caltrans"
+probname="d3d_demo"
+logname = "d3d_demo.log"
+csc.logunit = basopen(logname,"w")
+baspecho(logunit)
+logunit << "> # Command name:"
+logunit << "> #   /afs/fepcluster/usr/Caltrans/vcaltrans/bin/LINUX/caltrans"
+logunit << "> # Options:"
+logunit << "> #  d3d_demo.bas "
+logunit << " "
+output graphics; version; output tty
+read initcom
+read ploteq.ezn
+read macro.vs
+read bessel
+read macro.inv
+read "d3d_demo.bas"

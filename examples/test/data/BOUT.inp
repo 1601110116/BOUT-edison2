@@ -1,0 +1,4 @@
+grid="advect.grd.nc"
+
+[fft]
+fft_measure = true

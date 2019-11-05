@@ -1,0 +1,30 @@
+"KSTAR/DN"
+
+Plasma...
+      2.00 MA       plasma current
+      1.80 m        major radius
+      0.50 m        minor radius
+      0.00 m        Zaxis
+      1.90          95% elongation
+      0.30          95% triangularity
+      1e-6 m        Dsep (DN)
+      1.00          poloidal beta
+      0.73          li
+     -4.00 Wb       External flux linkage
+
+Toroidal field...
+3.50 T @ R = 1.80 m
+
+Computational grid...
+      1.00 m        Rmin
+      2.60 m        Rmax
+     -1.50 m        Zmin
+      1.50 m        Zmax
+ 33 x 65            No. grid points (Nr x Nz)
+
+Plot Scales...
+      0.00 m        Rmin
+      4.00 m        Rmax
+     -2.50 m        Zmin
+      2.50 m        Zmax
+      2.00 MA/m^2   Current density for drawing coil cross-sections

@@ -1,0 +1,28 @@
+Frame     1 (d3d_demo.001.ncgm)
+Corsica  (caltrans)
+Created on 03/13/12 at 07:42:05
+Run at 15:46:27 on 08/16/12 on the i686 machine
+Basis 12.1.1141
+History Package H2 Version 7.1
+PFB 5.2
+EZN Graphics Interface Version 5.9
+EZD Graphics Devices 3.7 GKS
+Frame     2 (d3d_demo.001.ncgm)
+   separatrix psi
+   plotz psiv r z lev=pxps(1)
+   plot zxpf rxpf mark=plus marksize=2 color=magenta
+   plot zaxis raxis mark=circle marksize=0.5 color=magenta
+   plot zxpl//zxpu rxpl//rxpu marksize=0.5 mark=cross color=red
+   plot zspt rspt mark=asterisk marksize=2 color=coral
+   plot zbd(1:nbd) rbd(1:nbd) mark=circle marksize=0.5 color=cyan
+   text lbd(n) rbd(n) zbd(n) 15 color=cyan
+   text lbd(n) rbd(n) zbd(n) 15 color=cyan
+   plot zlim(0) rlim(0) mark=circle thick=2 color=yellow
+   text "L0 " rlim(0) zlim(0) 15 0 1 color=yellow
+   plot zfbd_(::2) rfbd_(::2) mark=cross color=green
+   plot z_ r_
+   ftext tmp .26 .004 1 0 1
+   ftext tmp .34 .004 1 0 -1
+   plot zlimw rlimw color=magenta
+   ftext format(autopagenum_,0) .99 .01 pagenumsize 0 1
+A   1.322E+07

@@ -1,0 +1,19 @@
+codename="caltrans"
+probname="junkb_25109"
+logname = "junkb_25109.log"
+csc.logunit = basopen(logname,"w")
+baspecho(logunit)
+logunit << "> # Command name:"
+logunit << "> #   /home/rhb/caltrans/corsica/LINUX/caltrans"
+logunit << "> # Options:"
+logunit << "> #  -probname junkb_25109 iter.sav alfbd-scan.bas "
+logunit << " "
+output graphics; version; output tty
+read initcom
+read ploteq.ezn
+read macro.vs
+read bessel
+read macro.inv
+character*128 restore_file="iter.sav"
+read {restore}.bas
+read "alfbd-scan.bas"

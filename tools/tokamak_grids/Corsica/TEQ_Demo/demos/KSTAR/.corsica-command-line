@@ -1,0 +1,17 @@
+codename="caltrans"
+probname="junkb_064940"
+logname = "junkb_064940.log"
+csc.logunit = basopen(logname,"w")
+baspecho(logunit)
+logunit << "> # Command name:"
+logunit << "> #   /afs/localcell/home/bulmer1/caltrans/corsica/LINUX/caltrans"
+logunit << "> # Options:"
+logunit << "> #  -noleak -probname junkb_064940 kstar.bas "
+logunit << " "
+output graphics; version; output tty
+read initcom
+read ploteq.ezn
+read macro.vs
+read bessel
+read macro.inv
+read "kstar.bas"

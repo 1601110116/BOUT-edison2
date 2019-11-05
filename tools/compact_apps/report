@@ -1,0 +1,291 @@
+CrayPat/X:  Version 5.2.3 Revision 8155 (xf 8063)  09/13/11 08:47:57
+
+Number of PEs (MPI ranks):   6144
+                           
+Numbers of PEs per Node:       24  PEs on each of  256  Nodes
+                           
+Numbers of Threads per PE:      1
+                           
+Number of Cores per Socket:    12
+
+Execution start time:  Sun Feb  5 08:34:46 2012
+
+System type and speed:  x86_64 2100 MHz
+
+Current path to data file:
+  /global/homes/p/pravn/compact_apps/tridiag_parallel/tdma+10212-203t.ap2
+
+
+
+Notes for table 1:
+
+  Table option:
+    -O profile
+  Options implied by table option:
+    -d ti%@0.95,ti,imb_ti,imb_ti%,tr -b gr,fu,pe=HIDE,th=HIDE
+  Other options:
+    -T 
+
+  Options for related tables:
+    -O profile_pe.th           -O profile_th_pe       
+    -O profile+src             -O load_balance        
+    -O callers                 -O callers+src         
+    -O calltree                -O calltree+src        
+
+  The Total value for Time, Calls is the sum for the Group values.
+  The Group value for Time, Calls is the sum for the Function values.
+  The Function value for Time, Calls is the avg for the PE values.
+  The PE value for Time, Calls is the max for the Thread values.
+    (To specify different aggregations, see: pat_help report options s1)
+
+  This table shows only lines with Time% > 0.
+
+  Percentages at each level are of the Total for the program.
+    (For percentages relative to next level up, specify:
+      -s percent=r[elative])
+
+
+Table 1:  Profile by Function Group and Function
+
+ Time%  |     Time  |     Imb.  |  Imb.  | Calls  |Group 
+        |           |     Time  | Time%  |        | Function 
+        |           |           |        |        |  PE=HIDE 
+        |           |           |        |        |   Thread=HIDE 
+       
+ 100.0% | 29.611709 |        -- |     -- |   40.0 |Total
+|-----------------------------------------------------------------
+|  50.7% | 15.022579 | 13.779303 |  47.8% |    1.0 |USER
+||----------------------------------------------------------------
+|  50.7% | 15.022579 | 13.779303 |  47.8% |    1.0 | main
+||================================================================
+|  49.0% | 14.520641 |        -- |     -- |   38.0 |MPI
+||----------------------------------------------------------------
+||  25.1% |  7.423040 |  7.638593 |  50.7% |    5.0 |MPI_Recv
+||  24.0% |  7.097455 |  7.317486 |  50.8% |    1.0 |MPI_Finalize
+||   0.0% |  0.000051 |  0.001935 |  97.4% |    5.0 |MPI_Isend
+||   0.0% |  0.000046 |  0.000072 |  61.2% |    1.0 |MPI_Bcast
+||   0.0% |  0.000033 |  0.001110 |  97.1% |    5.0 |MPI_Wait
+||   0.0% |  0.000011 |  0.000016 |  59.6% |    4.0 |MPI_Wtime
+||   0.0% |  0.000003 |  0.000010 |  76.4% |    8.0 |MPI_Comm_rank
+||   0.0% |  0.000002 |  0.000008 |  78.4% |    8.0 |MPI_Comm_size
+||   0.0% |  0.000000 |  0.000001 |  57.8% |    1.0 |MPI_Init
+||================================================================
+|   0.2% |  0.068489 |  0.068438 |  99.9% |    1.0 |MPI_SYNC
+||----------------------------------------------------------------
+|   0.2% |  0.068489 |  0.068438 |  99.9% |    1.0 | MPI_Bcast(sync)
+|=================================================================
+
+
+================  Observations and suggestions  ========================
+
+
+MPI grid detection:  
+
+    No grid pattern detected in sent message traffic.
+
+================  End Observations  ====================================
+
+
+
+Notes for table 2:
+
+  Table option:
+    -O load_balance_m
+  Options implied by table option:
+    -d ti%@0.95,ti,Mc,Mm,Mz -b gr,pe=[mmm]
+  Other options:
+    -T 
+
+  Options for related tables:
+    -O load_balance_sm         -O load_balance_cm     
+
+  The Total value for each data item is the sum for the Group values.
+  The Group value for each data item is the avg for the PE values.
+    (To specify different aggregations, see: pat_help report options s1)
+
+  This table shows only lines with Time% > 0.
+
+  Percentages at each level are of the Total for the program.
+    (For percentages relative to next level up, specify:
+      -s percent=r[elative])
+
+
+Table 2:  Load Balance with MPI Message Stats
+
+ Time%  |     Time  |   MPI  |   MPI  |  Avg  |Group 
+        |           |   Msg  |   Msg  |  MPI  | PE=[mmm] 
+        |           | Count  | Bytes  |  Msg  |
+        |           |        |        | Size  |
+       
+ 100.0% | 29.611720 |    6.0 |   44.0 |  7.33 |Total
+|--------------------------------------------------------
+|  50.7% | 15.022579 |    0.0 |    0.0 |    -- |USER
+||-------------------------------------------------------
+||  97.3% | 28.801881 |    0.0 |    0.0 |    -- |pe.3576
+||  50.6% | 14.970450 |    0.0 |    0.0 |    -- |pe.4057
+||   5.1% |  1.517435 |    0.0 |    0.0 |    -- |pe.143
+||=======================================================
+|  49.0% | 14.520652 |    5.0 |   40.0 |  8.00 |MPI
+||-------------------------------------------------------
+||  94.6% | 28.025871 |    5.0 |   40.0 |  8.00 |pe.143
+||  49.2% | 14.570692 |    5.0 |   40.0 |  8.00 |pe.4901
+||   2.5% |  0.741444 |    5.0 |   40.0 |  8.00 |pe.3576
+||=======================================================
+|   0.2% |  0.068489 |    1.0 |    4.0 |  4.00 |MPI_SYNC
+||-------------------------------------------------------
+||   0.3% |  0.075820 |    1.0 |    4.0 |  4.00 |pe.5178
+||   0.2% |  0.068635 |    1.0 |    4.0 |  4.00 |pe.1698
+||   0.0% |  0.000051 |    1.0 |    4.0 |  4.00 |pe.0
+|========================================================
+
+
+Notes for table 3:
+
+  Table option:
+    -O mpi_callers
+  Options implied by table option:
+    -d Mm,Mc@,Mb1..7 -b fu,ca,pe=[mmm]
+  Other options:
+    -T 
+
+  Options for related tables:
+    -O mpi_sm_callers          -O mpi_coll_callers    
+
+  The Total value for each data item is the sum for the Function values.
+  The Function value for each data item is the sum for the Caller values.
+  The Caller value for each data item is the avg for the PE values.
+    (To specify different aggregations, see: pat_help report options s1)
+
+  This table shows only lines with MPI Msg Count > 0.
+
+
+Table 3:  MPI Message Stats by Caller
+
+   MPI  |   MPI  | MsgSz  |Function 
+   Msg  |   Msg  |  <16B  | Caller 
+ Bytes  | Count  | Count  |  PE=[mmm] 
+       
+   44.0 |    6.0 |    6.0 |Total
+|---------------------------------------------
+|   40.0 |    5.0 |    5.0 |MPI_Isend
+|        |        |        | MPI::Comm::Isend
+|||-------------------------------------------
+3||   32.0 |    4.0 |    4.0 |TDMA::forward_sweep
+4||        |        |        | main
+|||||-----------------------------------------
+5||||   32.0 |    4.0 |    4.0 |pe.2638
+5||||   32.0 |    4.0 |    4.0 |pe.846
+5||||    0.0 |    0.0 |    0.0 |pe.6143
+|||||=========================================
+3||    8.0 |    1.0 |    1.0 |TDMA::back_sweep
+4||        |        |        | main
+|||||-----------------------------------------
+5||||    8.0 |    1.0 |    1.0 |pe.2639
+5||||    8.0 |    1.0 |    1.0 |pe.847
+5||||    0.0 |    0.0 |    0.0 |pe.0
+|||===========================================
+|    4.0 |    1.0 |    1.0 |MPI_Bcast(sync)
+|        |        |        | MPI::Comm::Bcast
+3        |        |        |  TDMA::initialize
+4        |        |        |   main
+|||||-----------------------------------------
+5||||    4.0 |    1.0 |    1.0 |pe.2639
+5||||    4.0 |    1.0 |    1.0 |pe.847
+5||||    4.0 |    1.0 |    1.0 |pe.5136
+|=============================================
+
+
+Notes for table 4:
+
+  Table option:
+    -O program_time
+  Options implied by table option:
+    -d pt,hm -b pe=[mmm]
+  Other options:
+    -T 
+
+  The Total value for Process HiMem (MBytes), Process Time is the avg for the PE values.
+    (To specify different aggregations, see: pat_help report options s1)
+
+
+
+Table 4:  Wall Clock Time, Memory High Water Mark
+
+  Process  |  Process  |PE=[mmm] 
+     Time  |    HiMem  |
+           | (MBytes)  |
+          
+ 29.989198 |    28.848 |Total
+|--------------------------------
+| 30.168329 |    28.207 |pe.1281
+| 29.978392 |    28.219 |pe.1356
+| 29.965047 |    35.973 |pe.0
+|================================
+
+=========  Additional details ============================
+
+Experiment:  trace
+
+Original path to data file:
+  /global/u1/p/pravn/compact_apps/tridiag_parallel/tdma+10212-203t/000203.xf
+
+Original program:  /global/u1/p/pravn/compact_apps/tridiag_parallel/tdma
+
+Instrumented with:  pat_build -w -g mpi tdma 
+
+Instrumented program:  ./tdma
+
+Program invocation:  ./tdma 
+
+Exit Status:  0 for 6144 PEs
+
+CPU  Family: 10h  Model: 09h  Stepping: 1
+
+Core Performance Boost:  Capable for 0 PEs
+
+Memory pagesize:  4096
+
+Programming environment:  PGI
+
+Runtime environment variables:
+  PBS_VERSION=TORQUE-2.5.9
+  MODULE_VERSION=3.2.6.6
+  MODULE_VERSION_STACK=3.2.6.6
+  ASYNCPE_VERSION=5.04
+  ATP_HOME=/opt/cray/atp/1.3.0
+  ATP_MRN_COMM_PATH=/opt/cray/atp/1.3.0/bin/atp_mrnet_commnode_wrapper
+  ATP_POST_LINK_OPTS=-Wl,-L/opt/cray/atp/1.3.0/lib/ -Wl,-lAtpSigHandler -Wl,--undefined=__atpHandlerInstall
+  LIBSCI_VERSION=11.0.03
+  MPICH_ABORT_ON_ERROR=1
+  PGI_VERSION=11.9
+  XTOS_VERSION=4.0.36
+  CRAY_SHMEM_VERSION=5.4.0
+  CRAY_MPICH2_VERSION=5.4.0
+  MPICH_DIR=/opt/cray/mpt/5.4.0/xt/gemini/mpich2-pgi/109
+  CRAYPAT_ROOT_FOR_EVAL=/opt/cray/perftools/$PERFTOOLS_VERSION/cpatx
+  PAPI_VERSION=4.1.3
+  PAT_REPORT_PRUNE_NAME=__cray_hwpc_,f_cray_hwpc_,cstart,__pat_,pat_region_,PAT_,OMP.slave_loop,slave_entry,_new_slave_entry,__libc_start_main,_start,__start,start_thread,__wrap_,UPC_ADIO_,_upc_,upc_,__caf_,__pgas_
+  PERFTOOLS_VERSION=5.2.3
+  ACML_VERSION=4.4.0
+  CRAY_HDF5_VERSION=1.8.7
+  CRAY_NETCDF_VERSION=4.1.3
+  PAT_RT_SUMMARY=0
+
+Report time environment variables:
+  CRAYPAT_ROOT=/opt/cray/perftools/5.2.3/cpatx
+  PAT_REPORT_PRUNE_NAME=__cray_hwpc_,f_cray_hwpc_,cstart,__pat_,pat_region_,PAT_,OMP.slave_loop,slave_entry,_new_slave_entry,__libc_start_main,_start,__start,start_thread,__wrap_,UPC_ADIO_,_upc_,upc_,__caf_,__pgas_
+
+Report command line options:  -T
+
+Operating system:
+  Linux 2.6.32.45-0.3.2_1.0400.6336-cray_gem_c #1 SMP Wed Nov 16 04:53:30 UTC 2011
+
+Estimated minimum overhead per call of a traced function,
+  which was subtracted from the data shown in this report
+  (for raw data, use the option:  -s overhead=include):
+    Time  0.274  microsecs
+
+Number of traced functions:  272
+
+  (To see the list, specify:  -s traced_functions=show)
+

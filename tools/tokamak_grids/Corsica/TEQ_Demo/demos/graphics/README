@@ -1,0 +1,144 @@
+===============================================================================
+
+Corsica has a slew of standard scripts that define graphics routines. Two of
+these get loaded automatically at start-up:
+
+	ploteq.ezn    # Defines layout, profiles, pb, etc.
+	graphics.bas  # A spiffed-up version of ploteq
+
+At the Corisca prompt, type "scripts" to see the pathnames of all script files
+that have been loaded. These script files come from the $CORSICA_SCRIPTS
+directory (and device-specific sub-directrories) with your distribution of the
+code. You can always cd to a scripts directory and do things like
+
+	grep -wl plot *
+
+to see which scripts contain graphics routines. Be advised that a lot of the
+stuff in the standard script files is redundant, obsolete, broken, etc.!
+
+Most plotting routines are defined as Basis functions, some of which require
+arguments. Basis functions can be called in 3 ways:
+
+	chameleon result = fcn  # capture return value
+	call fcn                # ignore return value
+	fcn                     # display return value (if it's defined)
+
+If your're lucky, fcn("help") might provide you with useful information!
+
+I use a private shell script (bas) which displays function statements in a script file. When I execute 'bas' on caltrans/scripts/graphics.bas I get:
+
+-------------------------------------------------------------------------------
+function addplates # Add VV plates to passive structure model
+function coils(;fmt,out,ndec) # Display PF coil parameters
+function colors(;plotit) # Display available colors and colormap
+function contour(;skip_th,skip_srf,last_srf) # Plot flux coordinates
+function fixplates
+function fonts(;name) # Display font control information
+function graphics # Introduction to graphics.bas routines
+function layout(;coil_style,show_legend) # Plot configuration
+function omitplate(n)
+function pbg(;r1,r2,z1,z2) # Plot plasma boundary and constraints
+function pbx(;nlev) # Plot all x-point surfaces
+function pfbd(;r1,r2,z1,z2,nstride) # plot rfbd,zfbd with labels
+function pls(;nstride) # Plot rls,zls with labels
+function pplates(;nsize) # Plot plate geometry
+function ppsibar(;r_value,z_value)
+function profiles(;arg) # Plot plasma profiles
+function pufc(;alert) # Plot superconductor utilization factor for coils
+function pvac(;delta_psi, highlight) # Plot vacuum flux surfaces
+function pvsg(;option,n_surfaces,l_arrow,n_arrows,n_harm) # Plot VST results
+function pwires(;n,r1,r2,z1,z2) # Plot r,zwires, etc.
+function vst_plot(i_;l_l,t_f,t_i,ts_)
+function zoom(;r1,r2,z1,z2) # Zoom in for layout()
+-------------------------------------------------------------------------------
+
+and when I do "bas -a caltrans/cripts/graphics.bas" I get a complete list:
+
+-------------------------------------------------------------------------------
+function addplates # Add VV plates to passive structure model
+  function cframe(;do_nf) # Close graphics frame, restore Basis conventions
+  function cmap(;name,arg2) # Return color of component `name'
+function coils(;fmt,out,ndec) # Display PF coil parameters
+  function colonize(string) # Replace all colons in string with "::"
+function colors(;plotit) # Display available colors and colormap
+function contour(;skip_th,skip_srf,last_srf) # Plot flux coordinates
+  function drpfc(;coil_style,show_names,metric) # Draw PF coils
+  function drpsm(;showNumber) # Draw passive structure model
+  function drtfc(;metric) # Draw TF coil
+  function drwall(;metric) # Draw r,zplate configuration
+  function fancyFonts(;arg) # Get or set NCAR font quality
+function fixplates
+function fonts(;name) # Display font control information
+  function getbb(xvec,yvec;frac) # Get bounding box bb(1:4)
+function graphics # Introduction to graphics.bas routines
+function layout(;coil_style,show_legend) # Plot configuration
+  function oframe(;fontQuality) # Open graphics frame with Corsica conventions
+function omitplate(n)
+  function orderps # Order the x-points in arrays pxps,rxps,etc.
+function pbg(;r1,r2,z1,z2) # Plot plasma boundary and constraints
+function pbx(;nlev) # Plot all x-point surfaces
+function pfbd(;r1,r2,z1,z2,nstride) # plot rfbd,zfbd with labels
+function pls(;nstride) # Plot rls,zls with labels
+function pplates(;nsize) # Plot plate geometry
+function ppsibar(;r_value,z_value)
+function profiles(;arg) # Plot plasma profiles
+function pufc(;alert) # Plot superconductor utilization factor for coils
+function pvac(;delta_psi, highlight) # Plot vacuum flux surfaces
+function pvsg(;option,n_surfaces,l_arrow,n_arrows,n_harm) # Plot VST results
+function pwires(;n,r1,r2,z1,z2) # Plot r,zwires, etc.
+  function qtitles(;n,t,b,l,r) # Put titles on ezcquad(n) plot
+  function rcontr2(c,kneg) # Plot flux contours
+  function setaxes(;onoff) # Turn major tick mark and grid lines on/off
+  function setnice(;yesno_x,yesno_y) # turn x,y axis nice scaling on or off
+  function setticks(nticks) # set nbumber of minor tick marks per major
+  function setxticks(nticks) # set number of minor x-tick marks per major
+  function setyticks(nticks) # set number of minor y-tick marks per major
+  function stdtext(textline; optcsize, optcolnum,  optlinenum, optmaxcols, \
+  function uncolonize(string) # Replace all "::" in string ":"
+function vst_plot(i_;l_l,t_f,t_i,ts_)
+  function ytext(;y0,dy) # Initialize or increment text y position
+function zoom(;r1,r2,z1,z2) # Zoom in for layout()
+-------------------------------------------------------------------------------
+
+The function 'graphics' displays information about graphics.bas in a terminal
+window.
+
+Type 'win' to open an Xgks window and type 'colors' to see EZN colors with
+their names.
+
+Type "fonts" to get an introduction to the fonts routine, then try
+'fonts("list")'. The list will display font codes and font names.
+
+Pick a code or name from the list, say 'F8' or 'greek' and display the
+designated font (along with the default font), e.g.:
+
+	fonts("greek") or fonts("f8")
+
+You can change fonts in strings graphed by EZN routines, e.g.,
+
+	probid = ":F2:This looks like :F8:greek:F2: to me"
+
+(If you need a colon in a graphics string, use "::".)
+
+Some of the graphics.bas routines I use are:
+
+	coils      # coil parameters
+	contour    # inverse equilib solution
+	layout     # device layout
+	pbg        # plasma boundary
+	pbx        # show all x-point surfaces
+	pfbd       # plot fuzzy boundary points w/indices
+	pls        # plasma boundary w/indices
+	pplates    # r,zplates w/indices
+	profiles   # plasma profiles
+	pvs        # display VST output
+	pwires     # display passive structure
+	zoom       # change layout plot viewing scale
+
+Execute graphics demo...
+
+	caltrans sof.sav gdemo.bas
+
+Use NCAR graphics utilities to post-process ncgm files (ctrans, idt, etc.).
+
+===============================================================================

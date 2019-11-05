@@ -1,0 +1,2466 @@
+Frame     1 (d3d.001.ncgm)
+Corsica  (caltrans, Version dynamic)
+Created on 04/27/10 at 13:08:16
+Run at 17:06:50 on 09/08/11 on the i686 machine
+Basis 12.1.1141
+History Package H2 Version 7.1
+PFB 5.2
+EZN Graphics Interface Version 5.9
+EZD Graphics Devices 3.7 GKS
+Frame     2 (d3d.001.ncgm)
+   DIII-D generic 33x65 starting case
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+   plotz psiv 0.01*r 0.01*z lev=pxps(1) color=cmap("separatrix") thick=2
+   plot 0.01*zxpt 0.01*rxpt mark=cross color=cmap("separatrix")
+   plot 0.01*zxpf 0.01*rxpf mark=plus color=cmap("markers")
+   plot 0.01*zaxis 0.01*raxis mark=dot color=cmap("markers")
+   plot 0.01*zspt 0.01*rspt mark=asterisk color=cmap("StrikePoints")
+   plot 0.01*zbd(1:nbd) 0.01*rbd(1:nbd) mark=circle color=cmap("names")
+   text lbd(n) 0.01*rbd(n) 0.01*zbd(n) 15 color=cmap("names")
+   text lbd(n) 0.01*rbd(n) 0.01*zbd(n) 15 color=cmap("names")
+   plot 0.01*[zxpr(1),zxpr(1)] 0.01*[rxpr(1),rxpr(2)] style=dotted
+   plot 0.01*[zxpr(1),zxpr(2)] 0.01*[rxpr(2),rxpr(2)] style=dotted
+   plot 0.01*[zxpr(2),zxpr(2)] 0.01*[rxpr(2),rxpr(1)] style=dotted
+   plot 0.01*[zxpr(2),zxpr(1)] 0.01*[rxpr(1),rxpr(1)] style=dotted
+   plot 0.01*zlim(0) 0.01*rlim(0) mark=circle thick=2 color=cmap("LimiterPoint")
+   text "L0 " 0.01*rlim(0) 0.01*zlim(0) 15 0 1 color=cmap("LimiterPoint")
+A   1.552E+07
+Frame     2 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     2 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     3 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     3 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     3 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     3 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.560E+06  B   3.120E+06  C   4.679E+06  D   6.239E+06  E   7.799E+06
+F   9.359E+06  G   1.092E+07  H   1.248E+07  I   1.404E+07  J   1.560E+07
+K   0.000E+00  L  -6.688E+05  M  -1.321E+06
+Frame     4 (d3d.001.ncgm)
+   DIII-D generic 33x65 starting case
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+   plotz psiv 0.01*r 0.01*z lev=pxps(1) color=cmap("separatrix") thick=2
+   plot 0.01*zxpt 0.01*rxpt mark=cross color=cmap("separatrix")
+   plot 0.01*zxpf 0.01*rxpf mark=plus color=cmap("markers")
+   plot 0.01*zaxis 0.01*raxis mark=dot color=cmap("markers")
+   plot 0.01*zspt 0.01*rspt mark=asterisk color=cmap("StrikePoints")
+   plot 0.01*zbd(1:nbd) 0.01*rbd(1:nbd) mark=circle color=cmap("names")
+   text lbd(n) 0.01*rbd(n) 0.01*zbd(n) 15 color=cmap("names")
+   text lbd(n) 0.01*rbd(n) 0.01*zbd(n) 15 color=cmap("names")
+   plot 0.01*[zxpr(1),zxpr(1)] 0.01*[rxpr(1),rxpr(2)] style=dotted
+   plot 0.01*[zxpr(1),zxpr(2)] 0.01*[rxpr(2),rxpr(2)] style=dotted
+   plot 0.01*[zxpr(2),zxpr(2)] 0.01*[rxpr(2),rxpr(1)] style=dotted
+   plot 0.01*[zxpr(2),zxpr(1)] 0.01*[rxpr(1),rxpr(1)] style=dotted
+   plot 0.01*zlim(0) 0.01*rlim(0) mark=circle thick=2 color=cmap("LimiterPoint")
+   text "L0 " 0.01*rlim(0) 0.01*zlim(0) 15 0 1 color=cmap("LimiterPoint")
+A   1.552E+07
+Frame     4 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     4 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     5 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     5 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     5 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.560E+06  B   3.120E+06  C   4.679E+06  D   6.239E+06  E   7.799E+06
+F   9.359E+06  G   1.092E+07  H   1.248E+07  I   1.404E+07  J   1.560E+07
+K   0.000E+00  L  -6.688E+05  M  -1.321E+06
+Frame     6 (d3d.001.ncgm)
+   DIII-D generic 33x65 starting case
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+   plotz psiv 0.01*r 0.01*z lev=pxps(1) color=cmap("separatrix") thick=2
+   plot 0.01*zxpt 0.01*rxpt mark=cross color=cmap("separatrix")
+   plot 0.01*zxpf 0.01*rxpf mark=plus color=cmap("markers")
+   plot 0.01*zaxis 0.01*raxis mark=dot color=cmap("markers")
+   plot 0.01*zspt 0.01*rspt mark=asterisk color=cmap("StrikePoints")
+   plot 0.01*zbd(1:nbd) 0.01*rbd(1:nbd) mark=circle color=cmap("names")
+   text lbd(n) 0.01*rbd(n) 0.01*zbd(n) 15 color=cmap("names")
+   text lbd(n) 0.01*rbd(n) 0.01*zbd(n) 15 color=cmap("names")
+   plot 0.01*[zxpr(1),zxpr(1)] 0.01*[rxpr(1),rxpr(2)] style=dotted
+   plot 0.01*[zxpr(1),zxpr(2)] 0.01*[rxpr(2),rxpr(2)] style=dotted
+   plot 0.01*[zxpr(2),zxpr(2)] 0.01*[rxpr(2),rxpr(1)] style=dotted
+   plot 0.01*[zxpr(2),zxpr(1)] 0.01*[rxpr(1),rxpr(1)] style=dotted
+   plot 0.01*zlim(0) 0.01*rlim(0) mark=circle thick=2 color=cmap("LimiterPoint")
+   text "L0 " 0.01*rlim(0) 0.01*zlim(0) 15 0 1 color=cmap("LimiterPoint")
+A   4.658E+06
+Frame     6 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     6 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     7 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     7 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     7 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     7 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,)*metric y(1:5,)*metric color=cmap("PFCoils")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   plotp xp yp color=fgcolor
+A   1.552E+06  B   3.104E+06  C   4.656E+06  D   6.208E+06  E   7.760E+06
+F   9.312E+06  G   1.086E+07  H   1.242E+07  I   1.397E+07  J   1.552E+07
+K   0.000E+00  L  -6.553E+05  M  -1.294E+06
+Frame     8 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     8 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame     9 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame     9 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,)*metric y(1:5,)*metric color=cmap("PFCoils")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    10 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    10 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plot zcf(n0:loop0(1))*metric rcf(n0:loop0(1))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(2))*metric rcf(n0:loop0(2))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(3))*metric rcf(n0:loop0(3))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(4))*metric rcf(n0:loop0(4))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(5))*metric rcf(n0:loop0(5))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(6))*metric rcf(n0:loop0(6))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(7))*metric rcf(n0:loop0(7))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(8))*metric rcf(n0:loop0(8))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(9))*metric rcf(n0:loop0(9))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(10))*metric rcf(n0:loop0(10))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(11))*metric rcf(n0:loop0(11))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(12))*metric rcf(n0:loop0(12))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(13))*metric rcf(n0:loop0(13))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(14))*metric rcf(n0:loop0(14))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(15))*metric rcf(n0:loop0(15))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(16))*metric rcf(n0:loop0(16))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(17))*metric rcf(n0:loop0(17))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(18))*metric rcf(n0:loop0(18))*metric mark=dot color=cmap("filaments")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    11 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    11 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text format(n,0) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    12 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    12 (d3d.001.ncgm)
+   plot 0.01*[z(1),z(km)] 0.01*[r(1),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(2),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(3),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(4),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(5),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(6),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(7),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(8),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(9),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(10),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(11),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(12),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(13),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(14),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(15),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(16),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(17),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(18),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(19),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(20),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(21),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(22),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(23),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(24),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(25),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(26),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(27),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(28),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(29),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(30),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(31),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(32),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(33),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(34),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(35),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(36),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(37),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(38),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(39),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(40),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(41),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(42),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(43),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(44),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(45),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(46),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(47),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(48),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(49),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(50),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(51),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(52),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(53),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(54),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(55),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(56),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(57),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(58),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(59),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(60),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(61),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(62),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(63),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(64),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(65),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(66),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(67),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(68),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(69),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(70),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(71),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(72),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(73),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(74),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(75),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(76),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(77),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(78),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(79),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(80),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(81),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(82),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(83),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(84),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(85),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(86),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(87),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(88),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(89),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(90),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(91),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(92),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(93),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(94),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(95),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(96),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(97),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(98),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(99),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(100),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(101),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(102),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(103),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(104),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(105),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(106),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(107),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(108),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(109),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(110),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(111),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(112),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(113),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(114),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(115),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(116),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(117),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(118),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(119),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(120),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(121),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(122),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(123),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(124),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(125),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(126),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(127),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(128),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(129),r(j)] color=gray70
+   plot 0.01*[z(1),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(2),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(3),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(4),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(5),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(6),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(7),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(8),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(9),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(10),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(11),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(12),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(13),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(14),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(15),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(16),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(17),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(18),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(19),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(20),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(21),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(22),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(23),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(24),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(25),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(26),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(27),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(28),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(29),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(30),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(31),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(32),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(33),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(34),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(35),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(36),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(37),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(38),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(39),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(40),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(41),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(42),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(43),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(44),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(45),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(46),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(47),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(48),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(49),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(50),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(51),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(52),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(53),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(54),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(55),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(56),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(57),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(58),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(59),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(60),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(61),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(62),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(63),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(64),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(65),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(66),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(67),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(68),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(69),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(70),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(71),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(72),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(73),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(74),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(75),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(76),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(77),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(78),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(79),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(80),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(81),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(82),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(83),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(84),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(85),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(86),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(87),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(88),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(89),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(90),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(91),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(92),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(93),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(94),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(95),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(96),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(97),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(98),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(99),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(100),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(101),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(102),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(103),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(104),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(105),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(106),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(107),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(108),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(109),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(110),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(111),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(112),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(113),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(114),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(115),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(116),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(117),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(118),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(119),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(120),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(121),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(122),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(123),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(124),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(125),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(126),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(127),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(128),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(129),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(130),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(131),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(132),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(133),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(134),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(135),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(136),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(137),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(138),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(139),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(140),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(141),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(142),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(143),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(144),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(145),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(146),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(147),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(148),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(149),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(150),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(151),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(152),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(153),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(154),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(155),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(156),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(157),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(158),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(159),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(160),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(161),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(162),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(163),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(164),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(165),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(166),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(167),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(168),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(169),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(170),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(171),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(172),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(173),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(174),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(175),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(176),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(177),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(178),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(179),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(180),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(181),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(182),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(183),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(184),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(185),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(186),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(187),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(188),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(189),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(190),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(191),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(192),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(193),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(194),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(195),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(196),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(197),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(198),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(199),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(200),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(201),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(202),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(203),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(204),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(205),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(206),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(207),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(208),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(209),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(210),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(211),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(212),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(213),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(214),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(215),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(216),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(217),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(218),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(219),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(220),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(221),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(222),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(223),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(224),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(225),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(226),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(227),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(228),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(229),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(230),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(231),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(232),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(233),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(234),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(235),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(236),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(237),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(238),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(239),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(240),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(241),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(242),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(243),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(244),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(245),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(246),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(247),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(248),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(249),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(250),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(251),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(252),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(253),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(254),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(255),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(256),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(257),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plot zcf(n0:loop0(1))*metric rcf(n0:loop0(1))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(2))*metric rcf(n0:loop0(2))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(3))*metric rcf(n0:loop0(3))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(4))*metric rcf(n0:loop0(4))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(5))*metric rcf(n0:loop0(5))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(6))*metric rcf(n0:loop0(6))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(7))*metric rcf(n0:loop0(7))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(8))*metric rcf(n0:loop0(8))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(9))*metric rcf(n0:loop0(9))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(10))*metric rcf(n0:loop0(10))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(11))*metric rcf(n0:loop0(11))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(12))*metric rcf(n0:loop0(12))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(13))*metric rcf(n0:loop0(13))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(14))*metric rcf(n0:loop0(14))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(15))*metric rcf(n0:loop0(15))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(16))*metric rcf(n0:loop0(16))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(17))*metric rcf(n0:loop0(17))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(18))*metric rcf(n0:loop0(18))*metric mark=dot color=cmap("filaments")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    13 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    13 (d3d.001.ncgm)
+   plot 0.01*[z(1),z(km)] 0.01*[r(1),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(2),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(3),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(4),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(5),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(6),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(7),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(8),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(9),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(10),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(11),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(12),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(13),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(14),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(15),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(16),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(17),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(18),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(19),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(20),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(21),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(22),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(23),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(24),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(25),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(26),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(27),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(28),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(29),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(30),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(31),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(32),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(33),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(34),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(35),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(36),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(37),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(38),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(39),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(40),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(41),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(42),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(43),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(44),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(45),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(46),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(47),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(48),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(49),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(50),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(51),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(52),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(53),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(54),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(55),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(56),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(57),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(58),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(59),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(60),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(61),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(62),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(63),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(64),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(65),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(66),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(67),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(68),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(69),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(70),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(71),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(72),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(73),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(74),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(75),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(76),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(77),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(78),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(79),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(80),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(81),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(82),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(83),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(84),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(85),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(86),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(87),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(88),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(89),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(90),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(91),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(92),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(93),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(94),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(95),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(96),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(97),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(98),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(99),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(100),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(101),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(102),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(103),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(104),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(105),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(106),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(107),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(108),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(109),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(110),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(111),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(112),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(113),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(114),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(115),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(116),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(117),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(118),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(119),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(120),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(121),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(122),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(123),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(124),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(125),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(126),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(127),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(128),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(129),r(j)] color=gray70
+   plot 0.01*[z(1),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(2),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(3),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(4),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(5),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(6),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(7),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(8),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(9),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(10),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(11),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(12),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(13),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(14),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(15),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(16),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(17),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(18),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(19),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(20),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(21),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(22),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(23),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(24),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(25),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(26),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(27),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(28),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(29),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(30),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(31),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(32),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(33),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(34),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(35),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(36),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(37),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(38),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(39),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(40),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(41),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(42),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(43),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(44),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(45),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(46),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(47),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(48),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(49),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(50),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(51),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(52),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(53),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(54),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(55),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(56),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(57),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(58),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(59),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(60),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(61),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(62),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(63),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(64),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(65),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(66),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(67),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(68),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(69),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(70),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(71),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(72),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(73),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(74),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(75),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(76),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(77),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(78),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(79),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(80),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(81),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(82),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(83),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(84),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(85),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(86),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(87),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(88),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(89),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(90),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(91),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(92),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(93),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(94),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(95),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(96),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(97),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(98),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(99),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(100),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(101),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(102),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(103),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(104),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(105),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(106),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(107),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(108),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(109),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(110),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(111),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(112),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(113),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(114),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(115),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(116),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(117),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(118),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(119),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(120),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(121),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(122),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(123),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(124),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(125),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(126),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(127),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(128),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(129),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(130),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(131),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(132),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(133),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(134),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(135),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(136),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(137),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(138),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(139),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(140),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(141),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(142),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(143),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(144),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(145),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(146),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(147),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(148),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(149),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(150),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(151),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(152),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(153),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(154),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(155),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(156),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(157),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(158),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(159),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(160),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(161),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(162),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(163),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(164),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(165),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(166),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(167),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(168),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(169),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(170),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(171),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(172),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(173),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(174),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(175),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(176),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(177),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(178),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(179),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(180),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(181),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(182),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(183),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(184),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(185),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(186),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(187),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(188),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(189),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(190),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(191),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(192),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(193),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(194),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(195),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(196),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(197),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(198),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(199),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(200),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(201),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(202),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(203),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(204),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(205),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(206),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(207),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(208),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(209),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(210),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(211),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(212),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(213),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(214),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(215),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(216),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(217),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(218),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(219),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(220),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(221),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(222),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(223),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(224),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(225),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(226),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(227),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(228),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(229),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(230),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(231),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(232),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(233),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(234),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(235),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(236),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(237),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(238),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(239),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(240),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(241),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(242),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(243),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(244),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(245),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(246),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(247),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(248),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(249),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(250),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(251),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(252),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(253),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(254),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(255),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(256),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(257),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plot zcf(n0:loop0(1))*metric rcf(n0:loop0(1))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(2))*metric rcf(n0:loop0(2))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(3))*metric rcf(n0:loop0(3))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(4))*metric rcf(n0:loop0(4))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(5))*metric rcf(n0:loop0(5))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(6))*metric rcf(n0:loop0(6))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(7))*metric rcf(n0:loop0(7))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(8))*metric rcf(n0:loop0(8))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(9))*metric rcf(n0:loop0(9))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(10))*metric rcf(n0:loop0(10))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(11))*metric rcf(n0:loop0(11))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(12))*metric rcf(n0:loop0(12))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(13))*metric rcf(n0:loop0(13))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(14))*metric rcf(n0:loop0(14))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(15))*metric rcf(n0:loop0(15))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(16))*metric rcf(n0:loop0(16))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(17))*metric rcf(n0:loop0(17))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(18))*metric rcf(n0:loop0(18))*metric mark=dot color=cmap("filaments")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    14 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    14 (d3d.001.ncgm)
+   plot 0.01*[z(1),z(km)] 0.01*[r(1),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(2),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(3),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(4),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(5),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(6),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(7),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(8),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(9),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(10),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(11),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(12),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(13),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(14),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(15),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(16),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(17),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(18),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(19),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(20),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(21),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(22),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(23),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(24),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(25),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(26),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(27),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(28),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(29),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(30),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(31),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(32),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(33),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(34),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(35),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(36),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(37),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(38),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(39),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(40),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(41),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(42),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(43),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(44),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(45),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(46),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(47),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(48),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(49),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(50),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(51),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(52),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(53),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(54),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(55),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(56),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(57),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(58),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(59),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(60),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(61),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(62),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(63),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(64),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(65),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(66),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(67),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(68),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(69),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(70),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(71),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(72),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(73),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(74),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(75),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(76),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(77),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(78),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(79),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(80),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(81),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(82),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(83),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(84),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(85),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(86),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(87),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(88),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(89),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(90),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(91),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(92),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(93),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(94),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(95),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(96),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(97),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(98),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(99),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(100),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(101),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(102),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(103),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(104),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(105),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(106),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(107),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(108),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(109),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(110),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(111),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(112),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(113),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(114),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(115),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(116),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(117),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(118),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(119),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(120),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(121),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(122),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(123),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(124),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(125),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(126),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(127),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(128),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(129),r(j)] color=gray70
+   plot 0.01*[z(1),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(2),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(3),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(4),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(5),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(6),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(7),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(8),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(9),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(10),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(11),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(12),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(13),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(14),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(15),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(16),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(17),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(18),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(19),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(20),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(21),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(22),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(23),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(24),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(25),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(26),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(27),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(28),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(29),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(30),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(31),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(32),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(33),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(34),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(35),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(36),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(37),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(38),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(39),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(40),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(41),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(42),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(43),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(44),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(45),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(46),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(47),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(48),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(49),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(50),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(51),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(52),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(53),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(54),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(55),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(56),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(57),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(58),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(59),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(60),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(61),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(62),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(63),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(64),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(65),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(66),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(67),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(68),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(69),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(70),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(71),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(72),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(73),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(74),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(75),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(76),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(77),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(78),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(79),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(80),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(81),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(82),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(83),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(84),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(85),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(86),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(87),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(88),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(89),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(90),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(91),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(92),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(93),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(94),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(95),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(96),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(97),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(98),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(99),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(100),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(101),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(102),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(103),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(104),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(105),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(106),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(107),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(108),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(109),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(110),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(111),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(112),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(113),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(114),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(115),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(116),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(117),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(118),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(119),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(120),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(121),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(122),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(123),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(124),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(125),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(126),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(127),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(128),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(129),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(130),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(131),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(132),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(133),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(134),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(135),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(136),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(137),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(138),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(139),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(140),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(141),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(142),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(143),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(144),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(145),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(146),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(147),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(148),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(149),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(150),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(151),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(152),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(153),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(154),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(155),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(156),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(157),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(158),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(159),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(160),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(161),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(162),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(163),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(164),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(165),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(166),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(167),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(168),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(169),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(170),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(171),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(172),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(173),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(174),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(175),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(176),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(177),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(178),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(179),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(180),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(181),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(182),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(183),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(184),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(185),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(186),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(187),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(188),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(189),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(190),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(191),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(192),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(193),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(194),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(195),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(196),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(197),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(198),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(199),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(200),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(201),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(202),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(203),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(204),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(205),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(206),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(207),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(208),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(209),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(210),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(211),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(212),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(213),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(214),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(215),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(216),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(217),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(218),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(219),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(220),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(221),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(222),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(223),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(224),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(225),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(226),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(227),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(228),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(229),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(230),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(231),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(232),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(233),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(234),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(235),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(236),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(237),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(238),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(239),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(240),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(241),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(242),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(243),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(244),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(245),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(246),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(247),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(248),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(249),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(250),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(251),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(252),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(253),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(254),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(255),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(256),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(257),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plot zcf(n0:loop0(1))*metric rcf(n0:loop0(1))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(2))*metric rcf(n0:loop0(2))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(3))*metric rcf(n0:loop0(3))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(4))*metric rcf(n0:loop0(4))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(5))*metric rcf(n0:loop0(5))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(6))*metric rcf(n0:loop0(6))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(7))*metric rcf(n0:loop0(7))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(8))*metric rcf(n0:loop0(8))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(9))*metric rcf(n0:loop0(9))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(10))*metric rcf(n0:loop0(10))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(11))*metric rcf(n0:loop0(11))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(12))*metric rcf(n0:loop0(12))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(13))*metric rcf(n0:loop0(13))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(14))*metric rcf(n0:loop0(14))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(15))*metric rcf(n0:loop0(15))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(16))*metric rcf(n0:loop0(16))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(17))*metric rcf(n0:loop0(17))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(18))*metric rcf(n0:loop0(18))*metric mark=dot color=cmap("filaments")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    15 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    15 (d3d.001.ncgm)
+   plot 0.01*[z(1),z(km)] 0.01*[r(1),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(2),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(3),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(4),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(5),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(6),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(7),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(8),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(9),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(10),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(11),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(12),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(13),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(14),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(15),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(16),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(17),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(18),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(19),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(20),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(21),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(22),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(23),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(24),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(25),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(26),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(27),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(28),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(29),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(30),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(31),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(32),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(33),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(34),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(35),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(36),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(37),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(38),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(39),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(40),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(41),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(42),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(43),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(44),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(45),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(46),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(47),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(48),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(49),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(50),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(51),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(52),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(53),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(54),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(55),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(56),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(57),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(58),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(59),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(60),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(61),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(62),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(63),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(64),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(65),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(66),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(67),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(68),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(69),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(70),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(71),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(72),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(73),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(74),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(75),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(76),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(77),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(78),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(79),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(80),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(81),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(82),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(83),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(84),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(85),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(86),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(87),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(88),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(89),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(90),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(91),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(92),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(93),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(94),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(95),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(96),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(97),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(98),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(99),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(100),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(101),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(102),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(103),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(104),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(105),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(106),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(107),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(108),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(109),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(110),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(111),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(112),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(113),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(114),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(115),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(116),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(117),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(118),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(119),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(120),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(121),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(122),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(123),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(124),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(125),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(126),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(127),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(128),r(j)] color=gray70
+   plot 0.01*[z(1),z(km)] 0.01*[r(129),r(j)] color=gray70
+   plot 0.01*[z(1),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(2),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(3),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(4),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(5),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(6),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(7),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(8),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(9),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(10),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(11),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(12),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(13),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(14),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(15),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(16),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(17),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(18),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(19),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(20),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(21),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(22),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(23),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(24),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(25),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(26),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(27),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(28),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(29),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(30),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(31),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(32),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(33),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(34),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(35),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(36),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(37),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(38),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(39),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(40),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(41),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(42),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(43),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(44),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(45),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(46),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(47),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(48),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(49),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(50),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(51),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(52),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(53),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(54),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(55),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(56),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(57),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(58),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(59),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(60),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(61),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(62),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(63),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(64),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(65),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(66),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(67),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(68),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(69),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(70),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(71),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(72),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(73),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(74),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(75),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(76),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(77),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(78),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(79),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(80),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(81),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(82),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(83),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(84),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(85),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(86),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(87),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(88),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(89),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(90),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(91),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(92),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(93),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(94),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(95),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(96),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(97),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(98),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(99),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(100),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(101),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(102),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(103),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(104),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(105),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(106),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(107),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(108),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(109),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(110),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(111),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(112),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(113),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(114),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(115),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(116),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(117),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(118),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(119),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(120),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(121),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(122),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(123),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(124),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(125),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(126),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(127),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(128),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(129),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(130),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(131),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(132),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(133),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(134),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(135),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(136),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(137),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(138),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(139),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(140),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(141),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(142),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(143),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(144),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(145),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(146),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(147),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(148),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(149),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(150),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(151),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(152),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(153),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(154),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(155),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(156),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(157),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(158),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(159),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(160),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(161),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(162),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(163),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(164),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(165),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(166),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(167),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(168),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(169),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(170),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(171),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(172),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(173),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(174),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(175),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(176),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(177),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(178),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(179),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(180),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(181),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(182),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(183),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(184),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(185),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(186),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(187),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(188),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(189),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(190),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(191),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(192),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(193),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(194),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(195),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(196),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(197),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(198),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(199),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(200),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(201),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(202),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(203),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(204),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(205),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(206),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(207),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(208),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(209),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(210),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(211),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(212),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(213),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(214),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(215),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(216),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(217),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(218),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(219),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(220),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(221),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(222),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(223),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(224),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(225),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(226),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(227),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(228),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(229),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(230),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(231),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(232),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(233),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(234),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(235),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(236),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(237),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(238),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(239),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(240),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(241),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(242),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(243),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(244),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(245),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(246),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(247),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(248),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(249),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(250),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(251),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(252),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(253),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(254),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(255),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(256),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plot 0.01*[z(257),z(k)] 0.01*[r(1),r(jm)] color=gray70
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plot zcf(n0:loop0(1))*metric rcf(n0:loop0(1))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(2))*metric rcf(n0:loop0(2))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(3))*metric rcf(n0:loop0(3))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(4))*metric rcf(n0:loop0(4))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(5))*metric rcf(n0:loop0(5))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(6))*metric rcf(n0:loop0(6))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(7))*metric rcf(n0:loop0(7))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(8))*metric rcf(n0:loop0(8))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(9))*metric rcf(n0:loop0(9))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(10))*metric rcf(n0:loop0(10))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(11))*metric rcf(n0:loop0(11))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(12))*metric rcf(n0:loop0(12))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(13))*metric rcf(n0:loop0(13))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(14))*metric rcf(n0:loop0(14))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(15))*metric rcf(n0:loop0(15))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(16))*metric rcf(n0:loop0(16))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(17))*metric rcf(n0:loop0(17))*metric mark=dot color=cmap("filaments")
+   plot zcf(n0:loop0(18))*metric rcf(n0:loop0(18))*metric mark=dot color=cmap("filaments")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    16 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    16 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    16 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,)*metric y(1:5,)*metric color=cmap("PFCoils")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   text ":F2:"//trimr(pfid(n)) metric*100*rc(n) metric*100*zc(n) 1 0. 0 color=cmap("PFCoilNames")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    17 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    17 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    18 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    18 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
+Frame    19 (d3d.001.ncgm)
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+   text textline optcolnum optlinenum optcsize 0.0 optorientation color=stdcolor
+Frame    19 (d3d.001.ncgm)
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("plasma")
+   plotz psiv 0.01*r 0.01*z lev=alevels(1) color=cmap("separatrix") thick=2
+   plotz psiv 0.01*r 0.01*z lev=alevels(2:nlevels) color=cmap("SOLFlux")
+   plot 0.01*zxpu 0.01*rxpu mark=cross
+   plot 0.01*zxpl 0.01*rxpl mark=cross
+   text ":F18:D" 0.01*raxis 0.01*zaxis 1 0 0
+   plot y_psm x_psm color=cmap("PassiveStructure")
+   plot metric*zplate metric*rplate color=cmap("FirstWall") labels=" "
+   plotp x(1:5,1:ncplot)*metric y(1:5,1:ncplot)*metric color=cmap("PFCoils")
+   plot y(1:5,1:ncplot)*metric x(1:5,1:ncplot)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot y(1:8,n)*metric x(1:8,n)*metric color=cmap("PFCoilOutline")
+   plot 100*metric*zc(1:ncplot) 100*metric*rc(1:ncplot) mark=dot color=cmap("PFCoils")
+   plotp xp yp color=fgcolor
+A   1.546E+06  B   3.092E+06  C   4.638E+06  D   6.184E+06  E   7.730E+06
+F   9.276E+06  G   1.082E+07  H   1.237E+07  I   1.391E+07  J   1.546E+07
+K   0.000E+00  L  -6.549E+05  M  -1.293E+06
