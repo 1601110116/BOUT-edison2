@@ -28,10 +28,10 @@ data_*
 test*.py
 /bin/bout-config
 # /externalpackages/
-/include/pvode
-/lib/
-/manual/*.pdf
-/tools/vagrant/.vagrant
+# /include/pvode
+# /lib/
+# /manual/*.pdf
+# /tools/vagrant/.vagrant
 
 *.zip
 BOUT.dmp.*
