@@ -40,4 +40,6 @@ BOUT.restart.*
 cmake-build-debug/
 *.tmp
 .idea/
-.idea/*
+*.xml
+*.iml
+.name
