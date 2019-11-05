@@ -27,7 +27,7 @@ lib/
 data_*
 test*.py
 /bin/bout-config
-/externalpackages/
+# /externalpackages/
 /include/pvode
 /lib/
 /manual/*.pdf
@@ -38,3 +38,6 @@ BOUT.dmp.*
 BOUT.log.*
 BOUT.restart.*
 cmake-build-debug/
+*.tmp
+.idea/
+.idea/*
