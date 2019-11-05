@@ -38,3 +38,6 @@ BOUT.dmp.*
 BOUT.log.*
 BOUT.restart.*
 cmake-build-debug/
+*.tmp
+.idea/
+.idea/*
