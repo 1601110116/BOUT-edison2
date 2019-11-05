@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="6field-cmod" targetName="6field-cmod" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -12,6 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17e5690f-2277-422a-9e08-d726e3cacc22" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +24,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -63,12 +63,12 @@
     </option>
   </component>
   <component name="RunManager" selected="CMake Application.6field-cmod">
-    <configuration name="6field-cmod" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="-np 4 $PROJECT_DIR$/examples/6field-cmod/cmake-build-debug/6field-cmod" WORKING_DIR="file://$PROJECT_DIR$/examples/6field-cmod" PASS_PARENT_ENVS_2="true" PROJECT_NAME="6field-cmod" TARGET_NAME="6field-cmod" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun">
+    <configuration name="6field-cmod" type="CMakeRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="-np 4 $PROJECT_DIR$/examples/6field-cmod/cmake-build-debug/6field-cmod" WORKING_DIR="file://$PROJECT_DIR$/examples/6field-cmod" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BOUT++" TARGET_NAME="6field-cmod" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="I-mode" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 4 $PROJECT_DIR$/examples/I-mode/cmake-build-debug/I-mode" WORKING_DIR="file://$PROJECT_DIR$/examples/I-mode/" PASS_PARENT_ENVS_2="true" PROJECT_NAME="6field-cmod" TARGET_NAME="I-mode" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun">
+    <configuration name="I-mode" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 4 $PROJECT_DIR$/examples/I-mode/cmake-build-debug/I-mode" WORKING_DIR="file://$PROJECT_DIR$/examples/I-mode/" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BOUT++" TARGET_NAME="I-mode" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -93,6 +93,7 @@
       <workItem from="1572331973158" duration="16081000" />
       <workItem from="1572614673004" duration="3091000" />
       <workItem from="1572618331196" duration="3906000" />
+      <workItem from="1572944048853" duration="2087000" />
     </task>
     <servers />
   </component>
