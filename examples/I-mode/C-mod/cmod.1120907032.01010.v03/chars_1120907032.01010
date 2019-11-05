@@ -1,0 +1,26 @@
+CHARACTERISTICS FILE FOR C-MOD DATA DISTRIBUTION
+SHOT: 1120907032
+TIMEID: 01010
+COMMENT: 2012 I-mode with kinetic EFIT utilizing Thomson profiles and a initial estimate of ion dilution. Supplemental cxrs* file contains T, vpol, vtor, and Er data from the edge, with error bars. Note the cxrs* file is not in the same format as the p-file!
+           Ip (MA): -1.113  
+            Bt (T): -5.789  
+        Picrf (MW): 4.755   
+ nebar (1e20 m^-3): 1.774   
+         Wmhd (MJ): 0.180   
+            beta_N: 1.138   
+         Ave. Zeff: 3.815   
+ 
+Tue Jun 24 13:07:33 2014
+ 
+FILE LIST:
+total 1.6M
+-rw-r--r-- 1 jwhughes users 309K Jun 14  2013 g1120907032.01010
+-rw-r--r-- 1 jwhughes users 4.0K Jun 14  2013 a1120907032.01010
+-rw-r--r-- 1 jwhughes users  71K Jul  5  2013 eqdsk_1120907032.01010.ps
+-rw-r--r-- 1 jwhughes users 172K Jul  5  2013 p1120907032.01010.edge.eps
+-rw-r--r-- 1 jwhughes users 184K Jul  5  2013 p1120907032.01010.full.eps
+-rw-r--r-- 1 jwhughes users  53K Jul  5  2013 p1120907032.01010
+-rw-r--r-- 1 jwhughes users  16K Jul  5  2013 c1120907032.01010
+-rw-r--r-- 1 jwhughes users  11K Jun 24 13:02 cxrs1120907032.01010_v20140623
+-rw-r--r-- 1 jwhughes users    0 Jun 24 13:07 chars_1120907032.01010
+-rw-r--r-- 1 jwhughes users 760K Jun 24 13:07 traces_1120907032.01010.ps

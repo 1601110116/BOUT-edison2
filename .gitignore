@@ -27,7 +27,7 @@ lib/
 data_*
 test*.py
 /bin/bout-config
-/externalpackages/
+# /externalpackages/
 /include/pvode
 /lib/
 /manual/*.pdf
