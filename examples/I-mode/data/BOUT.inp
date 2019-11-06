@@ -5,7 +5,7 @@
 # Global settings used by the core code
 
 NOUT = 200          # number of time-steps
-TIMESTEP = 5.e0       # time between outputs
+TIMESTEP = 1.e0       # time between outputs
 archive = 20        # Archive restart files after this number of outputs
 wall_limit = 72  # wall time limit (in hours)
 
@@ -15,7 +15,7 @@ ShiftOrder = 0      # interpolation order (1 = nearest neighbour, 0=FFT)
 TwistOrder = 0      # order of twist-shift interpolation
 non_uniform = true
 
-MZ = 65             # number of points in z direction (2^n + 1)
+MZ = 17             # number of points in z direction (2^n + 1)
 ZPERIOD = 5        # Fraction of a torus to simulate
 
 MXG = 2
@@ -156,7 +156,7 @@ diff_par_flutter = true  # the perturbed part of the termal conduction
 diffusion_perp = -1.00  #perpendicular thermal conductivity (>0 open)
 q95_input = -5.0        #input q95 as a constant, if <0 use profile from grid
 local_q = true              # using magnetic field to calculate q profile, not recommanded
-q_alpha = 0.1                # flux-limiting coefficient, typical value is [0.03, 3]
+q_alpha = 1. #0.1                # flux-limiting coefficient, typical value is [0.03, 3]
 
 ## neoclassic switch
 neoclassic_i = false    #switch for ion neoclassical transport
