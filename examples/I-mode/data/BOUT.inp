@@ -5,9 +5,9 @@
 # Global settings used by the core code
 
 NOUT = 200          # number of time-steps
-TIMESTEP = 1.e0       # time between outputs
+TIMESTEP = 5.e0       # time between outputs
 archive = 20        # Archive restart files after this number of outputs
-wall_limit = 0.45  # wall time limit (in hours)
+wall_limit = 72  # wall time limit (in hours)
 
 ShiftXderivs = true # use shifted radial derivatives?
 TwistShift = true   # use twist-shift condition?
@@ -15,20 +15,17 @@ ShiftOrder = 0      # interpolation order (1 = nearest neighbour, 0=FFT)
 TwistOrder = 0      # order of twist-shift interpolation
 non_uniform = true
 
-MZ = 17             # number of points in z direction (2^n + 1)
-ZPERIOD = 30        # Fraction of a torus to simulate
+MZ = 65             # number of points in z direction (2^n + 1)
+ZPERIOD = 5        # Fraction of a torus to simulate
 
 MXG = 2
 MYG = 2
 
-#NXPE = 2           # Number of processor in X
+NXPE = 2           # Number of processor in X
 
-#grid="d3d_158772.04205_174_v1_260_0.85psi_bout.grd.nc"
-#grid="d3d_158772.04205_v3_260_bout.grd.nc"
-#grid = "d3d_144977.03103_815_v1_260x64y_bout.grd.nc"
-#grid = "d3d_144977.03103_815_v1_260x64y_bout.grd.nc"
-#grid = "cmod-1100212023_260x64y_v1_bout.grd.nc"
-grid = "cbm18_dens8.grid_nx68ny64.nc"
+grid = "bout.grd_C-Mod.nc"
+#grid = "cbm18_dens8.grid_nx68ny64.nc"
+#grid = "data/cbm18_8_y064_x516_090309.nc"
 
 dump_format = "nc"      # Dump file format. "nc" = NetCDF, "pdb" = PDB
 restart_format = "nc"   # Restart file format
@@ -106,7 +103,7 @@ func_iter = false     # Functional iteration (default is Newton)
 [highbeta]
 
 #hyperbolic tanh profile, N0 = N0tanh(n0_height*Nbar, n0_ave*Nbar, n0_width, n0_center) 
-n0_fake_prof = false    #use the hyperbolic profile of n0. If both  n0_fake_prof and T0_fake_prof are false, use the profiles from grid file 
+n0_fake_prof = false    #use the hyperbolic profile of n0. If both  n0_fake_prof and T0_fake_prof are false, use the profiles from grid file
 n0_height = 0.0        #the total height of profile of N0, in percentage of Ni_x
 n0_ave = 1.          #the constant tail of N0 profile, in percentage of Ni_x
 n0_width = 0.1         #the width of the gradient of N0, in percentage of x
@@ -115,6 +112,13 @@ n0_bottom_x = 0.81     #the start of flat region of N0 on SOL side, in percentag
 T0_fake_prof = false    #use the costant profile of T0. It is prior to n0_fake_prof
 Tconst = -1.0             #the amplitude of Ti0 and Te0, in percentage of Tibar
 
+impurity_prof = false    # Include the profile of impurity in the equilibrium (Now only valid for experimental profiles of N0 anf T0)
+load_impurity = false    # if load impurity density from grid
+Z_imp = 6               # The charge number of impurity
+A_imp = 12              # The mass number of impurity
+Nimp_lowlimit = false    # The switch to limit the lowest value of impurity density    
+quasi_neutral_Ni = true # The switch to use quasi neutral condition to calculate N0 instead of reading from grid. Does not work if impurity is on
+
 laplace_alpha = 1.0    #test the effect of first order term of invert 
                        #Laplace function
 Low_limit = 1.0e-10     #Limit the negative value of total density and temperatures
@@ -122,40 +126,43 @@ Low_limit = 1.0e-10     #Limit the negative value of total density and temperatu
 density = 1.0e20       # number density of deuterium [m^-3]
                        # used to produce output normalisations
 Zi = 1                 # ion charge number
-nonlinear  = false      # include non-linear terms?
-
-impurity_prof = true
-Nimp_lowlimit = false
-load_impurity = true
+nonlinear  = true      # include non-linear terms?
 
 diamag = true          # Include diamagnetic effects?
 diamag_grad_t = false  # Include Grad_par(Te) term in Psi equation
-diamag_phi0 = false     # Balance ExB against Vd for stationary equilibrium
-diamag_er = false       # Using Er0 instead of Phi0, more accurate
-experiment_Er = false   # Using experimental E_r
+diamag_phi0 = true     # Balance ExB against Vd for stationary equilibrium
+diamag_er = true       # Using Er0 instead of Phi0, more accurate
+experiment_Er = true   # Using experimental E_r
+KH_term = true         # switch to Kelvin-Helmholtz term
 
-compress0 = false       # open the ion velocity equation
-continuity = false      # use continuity eqution
-eHall = false         # electron Hall effects
-energy_flux = false     # energy flux 
-energy_exch = false     # energy exchange
-thermal_force = false   # thermal force
-gyroviscous =false    # gyroviscous in vorticity
+compress0 = true       # open the ion velocity equation
+continuity = true      # use continuity eqution
+eHall = true         # electron Hall effects
+energy_flux = true     # energy flux 
+energy_exch = true     # energy exchange
+thermal_force = true   # thermal force
+gyroviscous = true    # gyroviscous in vorticity
 parallel_viscous = false # parallel viscosity terms
  
 ## Resistivity and Hyper-resistivity
 spitzer_resist = true # open the calculation of Spitzer resistivity
 vac_lund = -1.0e8    # Lundquist number in vacuum  (negative -> infinity)
 core_lund = -1.0e6  # Lundquist number in core (negative -> infinity)
-hyperresist = -1.e-13 # Hyper-resistivity coefficient (like 1 / Lundquist number)
+hyperresist = 3.e-12 # Hyper-resistivity coefficient (like 1 / Lundquist number)
 
 ## Parallel pressure diffusion
-diffusion_par = -1.00   #parallel thermal conductivity (>0 open)
-diff_par_flutter = false  # the perturbed part of the termal conduction
+diffusion_par = 1.00   #parallel thermal conductivity (>0 open)
+diff_par_flutter = true  # the perturbed part of the termal conduction
 diffusion_perp = -1.00  #perpendicular thermal conductivity (>0 open)
 q95_input = -5.0        #input q95 as a constant, if <0 use profile from grid
 local_q = true              # using magnetic field to calculate q profile, not recommanded
-q_alpha = 0.05                # flux-limiting coefficient, typical value is [0.03, 3]
+q_alpha = 0.1                # flux-limiting coefficient, typical value is [0.03, 3]
+
+## neoclassic switch
+neoclassic_i = false    #switch for ion neoclassical transport
+neoclassic_e = false    #switch for electron neoclassical transport
+epsilon = 0.197           #the value of inverse aspect ratio
+#############################################################################
 
 diffusion_n4 = -1.0e-5      # 4th order Parallel density diffusion (< 0 = none)
 diffusion_ti4 = -1.0e-4      # 4th order Parallel ion temperature diffusion (< 0 = none)
@@ -173,8 +180,8 @@ const_bp = -0.5
 PF_limit = false              # swith of the filter at PF
 PF_limit_range = 0.5         # the range of the filter at x direction (1 means all the PF region)
 PF_sink = -1                # sink term at inner boundary of PF
-PFs_width = 0.12
-PFs_length = 1.0
+PFs_width = 0.06
+PFs_length = 0.1
 ##########################################################################
 
 ## Sheath Boundary Condition ##########################################
@@ -187,8 +194,8 @@ SBC_phi = false         #use sheath boundary on phi instead of Jpar
 ## output control #####################################################
 output_transfer = false     # output the results of energy transfer
 out_put_ohm = false         # output the results of the terms in Ohm's law
-output_flux_par = false      # output the heat flux
-output_vradial = false       # output the results of radial velocity, induced by ExB and magnetic flutter
+output_flux_par = true      # output the heat flux
+output_vradial = true       # output the results of radial velocity, induced by ExB and magnetic flutter
 #######################################################################
 
 evolve_jpar = false    # If true, evolve J raher than Psi
@@ -221,13 +228,26 @@ relax_j_vac = false    # Relax to zero-current in the vacuum
 relax_j_tconst = 1e-2  # Time constant for vacuum relaxation
 
 ## Toroidal filtering
-filter_z = true    # remove all except one mode
+filter_z = false    # remove all except one mode
 filter_z_nonlinear = false  # remove all except zonal and filter_z_mode
 filter_z_mode = 1  # Specify which harmonic to keep (1 = fundamental)
 low_pass_z = 16    # Keep up to and including this harmonic (-1 = keep all)
 zonal_flow = 0     # remove this zonal harmonic  (-1 = keep zonal harmonic)
 zonal_field= 0     # remove this zonal harmonic  (-1 = keep zonal harmonic)
-zonal_bkgd = -1    # remove this zonal harmonic  (-1 = keep zonal harmonic)
+zonal_bkgd = 0    # remove this zonal harmonic  (-1 = keep zonal harmonic)
+
+## Toroidal filtering for certain position
+pos_filter = false   #switch to turn on the filter of the negative zonal background
+pos_filter2 = false  # switch to turn on the filter inside certain position
+pos_filter_zf = flase     # switch to turn on the filter of the dc profiles inside certain postion with tanh function
+pos_sink_zf = -10.    # switch to turn on the sink of the dc profiles inside certain postion with tanh function
+keep_zonalPF = false  # keep the zonal component in PF region when zonal filter is turned on
+filter_position_ni = 181  # radial index of the filter/sink. Zonal component in the x range of 0 - filter_position_ni will be filtered
+filter_position_ti = 123  # radial index of the filter/sink. Zonal component in the x range of 0 - filter_position_ni will be filtered
+filter_position_te = 178  # radial index of the filter/sink. Zonal component in the x range of 0 - filter_position_ni will be filtered
+pos_filter_width = 0.02   # width of pos_filter_zf with the normalization of filter_position
+pos_filter_length = 0.95   # length of pos_filter_zf with the normalization of filter_position
+#################################################################################
 
 ## Jpar smoothing
 smooth_j_x = false   # Smooth Jpar in the X direction
@@ -257,7 +277,7 @@ hp_width  = 0.1     #   heat width, in percentage of nx (< 0 = none)
 hp_length = 0.3    #   heat length in percentage of nx (< 0 = none)
  
 ## sink rate in parallel velocity
-sink_vp = 10.0   #   sink rate in Vipar (< 0 = none)
+sink_vp = 10.0   #   left edge sink rate in Vipar (< 0 = none)
 sp_width  = 0.06     #   sink width, in percentage of nx (< 0 = none)
 sp_length = 0.1    #   sink length in percentage of nx (< 0 = none)
  
@@ -272,15 +292,15 @@ sink_Ur = -1.0e1        #   right edge sink rate in vorticity (< 0 = none)
 su_widthr  = 0.06     #   right edge sink width, in percentage of nx (< 0 = none)
 su_lengthr = 0.1     #   right edge sink length in percentage of nx (< 0 = none)
 
-## right edge sink rate in Psi
-sink_Ter = 10        #   right edge sink rate in Psi (< 0 = none)
+## right edge sink rate in Te
+sink_Ter = 10        #   right edge sink rate in Te (< 0 = none)
 ste_widthr  = 0.06     #   right edge sink width, in percentage of nx (< 0 = none)
 ste_lengthr = 0.1     #   right edge sink length in percentage of nx (< 0 = none)
 
 
 ## Viscosity and Hyper-viscosity
 
-viscos_par = -0.01   # Parallel viscosity (< 0 = none)
+viscos_par = 0.1   # Parallel viscosity (< 0 = none)
 viscos_perp = -1.0  # Perpendicular
 hyperviscos = -1.0  # Radial hyper viscosity
 
@@ -324,7 +344,7 @@ scale = 0.0 # default size of initial perturbations
 
 xs_opt = 1
 ys_opt = 1
-zs_opt = 2
+zs_opt = 5
 
 #xs_s0 = 0.5
 #xs_wd = 0.1
@@ -336,7 +356,7 @@ xs_wd = 0.05
 ys_s0 = 0.6
 ys_wd = 0.3
 
-zs_mode = 1
+zs_mode = 5
 
 # boundary conditions
 # -------------------
