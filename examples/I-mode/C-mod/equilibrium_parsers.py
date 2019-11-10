@@ -3,7 +3,7 @@ from typing import List
 
 
 class PfileParser(object):
-    """This class parses a pfile, returning the profiles in Lists. Originally designed
+    """This class parses a p-file, returning the profiles in Lists. Originally designed
     using Alcator C-mod p1120907032.01010. Other pfiles might require modifications of
     the parser. The pfile is supposed to be in the current directory.
 
