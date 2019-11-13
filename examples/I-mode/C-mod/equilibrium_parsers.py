@@ -49,10 +49,10 @@ class PfileParser(object):
                 line = f.readline()
                 if not line:
                     raise EOFError('Failed to parse pfile: %s' % self.filename)
-                groups = re.match(r'^(.*ne\(10\^)(\d+)(/)(.*)(\).*)$', line)
+                groups = re.match(r'^(.*ne\(10\^)(\d+)(/.*)(\).*)$', line)
                 if groups:
                     order = float(groups.group(2))
-                    unit = groups.group(4)
+                    unit = groups.group(3)
                     break
             ne: List[float] = []
             while True:
@@ -76,10 +76,10 @@ class PfileParser(object):
                 line = f.readline()
                 if not line:
                     raise EOFError('Failed to parse pfile: %s' % self.filename)
-                groups = re.match(r'^(.*ni\(10\^)(\d+)(/)(.*)(\).*)$', line)
+                groups = re.match(r'^(.*ni\(10\^)(\d+)(/.*)(\).*)$', line)
                 if groups:
                     order = float(groups.group(2))
-                    unit = groups.group(4)
+                    unit = groups.group(3)
                     break
             ni: List[float] = []
             while True:

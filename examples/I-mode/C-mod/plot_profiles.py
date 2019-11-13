@@ -55,9 +55,11 @@ axs[1][0].set_ylabel(r'$v_{B^{5+}}\ \left(\mathrm{km/s}\right)$')
 axs[1][0].legend()
 
 psinorm, Er, Er_err, Er_unit = parser.get_Er()
+psinorm = np.array(psinorm)
 axs[1][1].errorbar(psinorm, np.asarray(Er), yerr=np.asarray(Er_err), errorevery=5,
                    capsize=2.5)
 axs[1][1].set_xlabel(r'$\psi_{nor}$')
 axs[1][1].set_ylabel(r'$E_{r}\ \left(\mathrm{kV/m}\right)$')
+# axs[1, 1].axvspan(psinorm.min(), psinorm.max(), 0.5, 0.6)
 plt.savefig('CXRS_profiles.png')
 plt.show()
