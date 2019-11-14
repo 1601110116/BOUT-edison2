@@ -43,3 +43,4 @@ cmake-build-debug/
 *.xml
 *.iml
 .name
+venv/
