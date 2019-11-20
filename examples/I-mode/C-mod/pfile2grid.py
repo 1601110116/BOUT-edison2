@@ -11,6 +11,7 @@ import scipy.interpolate as spi
 import numpy as np
 import matplotlib.pylab as plt
 import matplotlib as mpl
+from boututils.datafile import DataFile
 
 src_name: str = "bout.grd_C-Mod.nc"
 dst_name: str = "bout.grd_C-Mod_expNi.nc"
@@ -46,11 +47,11 @@ tmp = spi.splrep(psinorm_p, Te_p)
 Teexpx = spi.splev(psinormx, tmp)
 
 # reconcile the unit with .cxx file
-Niexpx = Niexpx / density;
-Neexpx = Neexpx / density;
+Niexpx = Niexpx / density
+Neexpx = Neexpx / density
 if pfile_keV:
-    Tiexpx = Tiexpx * 1e3;
-    Teexpx = Teexpx * 1e3;
+    Tiexpx = Tiexpx * 1e3
+    Teexpx = Teexpx * 1e3
 
 # use the interpolated profile for all y
 ny = src_file["ny"]
@@ -100,3 +101,9 @@ plt.savefig("nTinGrid.png")
 plt.show()
 
 # save the profiles in dst_file
+with DataFile(dst_name, True) as dst_file:
+    dst_file.write("Niexp", Niexp)
+    dst_file.write("Neexp", Neexp)
+    dst_file.write("Tiexp", Tiexp)
+    dst_file.write("Teexp", Teexp)
+
