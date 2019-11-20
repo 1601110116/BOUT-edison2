@@ -1591,17 +1591,17 @@ int physics_init(bool restarting)
     }
   else
     {
-      if(mesh->get(N0,  "Ni0")) { // N_i0
+      if(mesh->get(N0,  "Niexp")) { // N_i0                                          
 	output.write("Error: Cannot read Ni0 from grid\n");
 	return 1;
       } 
       
-      if(mesh->get(Ti0,  "Ti0")) { // T_i0
+      if(mesh->get(Ti0,  "Tiexp")) { // T_i0                                         
 	output.write("Error: Cannot read Ti0 from grid\n");
 	return 1;
       }
 
-      if(mesh->get(Te0,  "Te0")) { // T_e0
+      if(mesh->get(Te0,  "Teexp")) { // T_e0  
 	output.write("Error: Cannot read Te0 from grid\n");
 	return 1;
       }	
@@ -1612,7 +1612,7 @@ int physics_init(bool restarting)
 
       if (impurity_prof)
 	{
-	  if(mesh->get(Ne0,  "Neexp"))
+	  if(mesh->get(Ne0,  "Neexp")) 
 	    { // N_e0     
 	      output.write("Error: Cannot read Ne0 from grid\n");
 	      return 1;
