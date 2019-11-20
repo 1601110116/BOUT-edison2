@@ -1,15 +1,15 @@
 """
-grd_file_name is the .nc grid file to be modified
-p_file_name is the p-file used to modify grd_file\
+src_name: the .nc grid file to be modified
+dst_name: the name of the output file
+pfile_name is the p-file used
 density: same of the 'density' in BOUT.inp
-nbins: level of contourf
 """
 from shutil import copyfile
 from equilibrium_parsers import PfileParser
 from boututils.file_import import file_import
 import scipy.interpolate as spi
 import numpy as np
-import matplotlib.pylab as plt
+import matplotlib.pyplot as plt
 import matplotlib as mpl
 from boututils.datafile import DataFile
 
@@ -21,7 +21,7 @@ figsize = (10, 12)
 fontsize = 24
 pfile_keV = True  # if the unit of Te is keV in p-file
 
-
+# read profiles from p-file
 pp = PfileParser(pfile_name)
 psinorm_p = pp.get_psinorm()
 Ni_p, Ni_unit_p = pp.get_ni()
@@ -73,7 +73,7 @@ Neexp[: ixseps1, jyseps2_2+1:] = Neexpx[ixseps1]
 Tiexp[: ixseps1, jyseps2_2+1:] = Tiexpx[ixseps1]
 Teexp[: ixseps1, jyseps2_2+1:] = Teexpx[ixseps1]
 
-# contour the results and save
+# contour the results
 Rxy = src_file["Rxy"]
 Zxy = src_file["Zxy"]
 cmap = plt.get_cmap("jet")
