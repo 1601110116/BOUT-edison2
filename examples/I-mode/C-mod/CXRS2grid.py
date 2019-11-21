@@ -20,6 +20,7 @@ CXRS_name: str = "cxrs1120907032.01010_v20140623.txt"
 figsize = (6, 6)
 fontsize = 24
 CXRS_Er_kVm = True
+pf_0_Er = False
 
 # read Er profile from CXRS file
 # 'C' means CXRS
@@ -49,8 +50,12 @@ E_r = np.tile(E_rx[:, np.newaxis], (1, ny))
 ixseps1 = src_file["ixseps1"]
 jyseps1_1 = src_file["jyseps1_1"]
 jyseps2_2 = src_file["jyseps2_2"]
-E_r[: ixseps1, :jyseps1_1 + 1] = 0.0
-E_r[: ixseps1, jyseps2_2 + 1:] = 0.0
+if pf_0_Er:
+    E_r[: ixseps1, :jyseps1_1 + 1] = 0.0
+    E_r[: ixseps1, jyseps2_2 + 1:] = 0.0
+else:
+    E_r[: ixseps1, :jyseps1_1 + 1] = E_rx[ixseps1]
+    E_r[: ixseps1, jyseps2_2 + 1:] = E_rx[ixseps1]
 
 # contour the result
 Rxy = src_file["Rxy"]
@@ -62,6 +67,8 @@ xticks = mpl.ticker.MaxNLocator(nbins=5).tick_values(Rxy.min(), Rxy.max())
 yticks = mpl.ticker.MaxNLocator(nbins=10).tick_values(Zxy.min(), Zxy.max())
 cbar = plt.colorbar(ct, fraction=0.08, aspect=40)
 cbar.ax.tick_params(labelsize=fontsize)
+plt.title(r'$E_{r}\left(V/m\right)$', fontsize=fontsize)
+
 plt.savefig("ErinGrid.png")
 plt.show()
 
