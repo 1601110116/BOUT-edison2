@@ -193,6 +193,11 @@ class DataFile_netCDF(DataFile):
                 if n.lower() == name.lower():
                     print("WARNING: Reading '"+n+"' instead of '"+name+"'")
                     var = self.handle.variables[n]
+            try:
+                var = eval('self.handle.%s' % name)
+                return var
+            except AttributeError:
+                var = None
             if var == None:
                 return None
         ndims = len(var.dimensions)
