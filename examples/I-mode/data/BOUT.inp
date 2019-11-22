@@ -15,7 +15,7 @@ ShiftOrder = 0      # interpolation order (1 = nearest neighbour, 0=FFT)
 TwistOrder = 0      # order of twist-shift interpolation
 non_uniform = true
 
-MZ = 17             # number of points in z direction (2^n + 1)
+MZ = 33             # number of points in z direction (2^n + 1)
 ZPERIOD = 5        # Fraction of a torus to simulate
 
 MXG = 2
