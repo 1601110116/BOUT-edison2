@@ -16,7 +16,7 @@ from boututils.datafile import DataFile
 src_name: str = "bout.grd_C-Mod.nc"
 dst_name: str = "bout.grd_C-Mod_expNi.nc"
 pfile_name: str = "p1120907032.01010"
-density = 1.0e19
+density = 1.0e20
 figsize = (10, 12)
 fontsize = 24
 pfile_keV = True  # if the unit of Te is keV in p-file
