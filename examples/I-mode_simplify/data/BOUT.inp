@@ -6,8 +6,8 @@
 
 NOUT = 200          # number of time-steps
 TIMESTEP = 1.e0       # time between outputs
-archive = 20        # Archive restart files after this number of outputs
-wall_limit = 72  # wall time limit (in hours)
+archive = 10        # Archive restart files after this number of outputs
+wall_limit = 96  # wall time limit (in hours)
 
 ShiftXderivs = true # use shifted radial derivatives?
 TwistShift = true   # use twist-shift condition?
@@ -16,12 +16,12 @@ TwistOrder = 0      # order of twist-shift interpolation
 non_uniform = true
 
 MZ = 17             # number of points in z direction (2^n + 1)
-ZPERIOD = 5        # Fraction of a torus to simulate
+ZPERIOD = 10        # Fraction of a torus to simulate
 
 MXG = 2
 MYG = 2
 
-NXPE = 2           # Number of processor in X
+NXPE = 1           # Number of processor in X
 
 #grid = "bout.grd_C-Mod.nc"
 grid = "bout.grd_C-Mod_expNiEr.nc"
@@ -118,7 +118,7 @@ load_impurity = false    # if load impurity density from grid
 Z_imp = 6               # The charge number of impurity
 A_imp = 12              # The mass number of impurity
 Nimp_lowlimit = false    # The switch to limit the lowest value of impurity density    
-quasi_neutral_Ni = true # The switch to use quasi neutral condition to calculate N0 instead of reading from grid. Does not work if impurity is on
+quasi_neutral_Ni = false # The switch to use quasi neutral condition to calculate N0 instead of reading from grid. Does not work if impurity is on
 
 laplace_alpha = 1.0    #test the effect of first order term of invert 
                        #Laplace function
@@ -127,7 +127,7 @@ Low_limit = 1.0e-10     #Limit the negative value of total density and temperatu
 density = 1.0e20       # number density of deuterium [m^-3]
                        # used to produce output normalisations
 Zi = 1                 # ion charge number
-nonlinear  = true      # include non-linear terms?
+nonlinear  = false      # include non-linear terms?
 
 diamag = true          # Include diamagnetic effects?
 diamag_grad_t = false  # Include Grad_par(Te) term in Psi equation
@@ -229,7 +229,7 @@ relax_j_vac = false    # Relax to zero-current in the vacuum
 relax_j_tconst = 1e-2  # Time constant for vacuum relaxation
 
 ## Toroidal filtering
-filter_z = false    # remove all except one mode
+filter_z = true    # remove all except one mode
 filter_z_nonlinear = false  # remove all except zonal and filter_z_mode
 filter_z_mode = 1  # Specify which harmonic to keep (1 = fundamental)
 low_pass_z = 16    # Keep up to and including this harmonic (-1 = keep all)
@@ -345,7 +345,7 @@ scale = 0.0 # default size of initial perturbations
 
 xs_opt = 1
 ys_opt = 1
-zs_opt = 5
+zs_opt = 2
 
 #xs_s0 = 0.5
 #xs_wd = 0.1
@@ -357,7 +357,7 @@ xs_wd = 0.05
 ys_s0 = 0.6
 ys_wd = 0.3
 
-zs_mode = 5
+zs_mode = 1
 
 # boundary conditions
 # -------------------
