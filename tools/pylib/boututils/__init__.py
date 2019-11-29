@@ -20,6 +20,7 @@ for_all_versions = [\
                     'showdata',\
                     # 'surface_average',\
                     # 'volume_integral',\ #bunch pkg required
+                    'growth_rate',\
                     ]
 
 # Check the current python version
