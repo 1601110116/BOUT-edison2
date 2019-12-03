@@ -53,7 +53,8 @@ def pol_slice(var3d, gridfile, n=1, zangle=0.0):
             print("Using qinty as toroidal shift angle")
         else:
             zShift = gf.read("zShift")
-            if zShift != None:
+            # if zShift != None:
+            if not (zShift is None):
                 print("Using zShift as toroidal shift angle")
             else:
                 print("ERROR: Neither qinty nor zShift found")
