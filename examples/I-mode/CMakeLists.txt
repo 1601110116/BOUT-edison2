@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.9...3.12)
 set(EXE_NAME I-mode)
 project(${EXE_NAME} LANGUAGES CXX)
 
-set(CMAKE_PREFIX_PATH /home/ylang/local/BOUT-edison2)
+set(CMAKE_PREFIX_PATH /gpfs/share/home/1601110116/usr/local/BOUT-edison2)
 find_package(MPI REQUIRED)
 include_directories($MPI_INCLUDE_PATH)
 find_package(bout++ REQUIRED)

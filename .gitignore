@@ -44,3 +44,5 @@ cmake-build-debug/
 *.iml
 .name
 venv/
+CMakeLists.txt
+examples/I-mode/CMakeLists.txt

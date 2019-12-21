@@ -31,6 +31,8 @@
 # Taken from https://github.com/conan-io/conan/issues/2125#issuecomment-351176653
 # This is needed so we can make a clone of the NetCDF C++ target which
 # has the name "netcdf-cxx4" by default
+set(CMAKE_INCLUDE_PATH "/gpfs/share/home/1601110116/usr/local/include")
+set(CMAKE_LIBRARY_PATH "/gpfs/share/home/1601110116/usr/local/lib")
 function(add_cloned_imported_target dst src)
     add_library(${dst} INTERFACE IMPORTED)
     foreach(name INTERFACE_LINK_LIBRARIES INTERFACE_INCLUDE_DIRECTORIES INTERFACE_COMPILE_DEFINITIONS INTERFACE_COMPILE_OPTIONS)

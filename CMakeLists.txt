@@ -456,7 +456,7 @@ endif()
 message(STATUS "FFTW support: ${USE_FFTW}")
 set(BOUT_HAS_FFTW ${USE_FFTW})
 
-option(USE_LAPACK "Enable support for LAPACK" ON)
+option(USE_LAPACK "Enable support for LAPACK" OFF)
 if (USE_LAPACK)
   if (NOT CMAKE_SYSTEM_NAME STREQUAL "CrayLinuxEnvironment")
     # Cray wrappers sort this out for us
@@ -615,7 +615,7 @@ endif()
 
 ##################################################
 # Installation
-set(CMAKE_INSTALL_PREFIX /home/ylang/local/BOUT-edison2)
+set(CMAKE_INSTALL_PREFIX /gpfs/share/home/1601110116/usr/local/BOUT-edison2)
 include(GNUInstallDirs)
 install(TARGETS bout++
         EXPORT bout++Targets
